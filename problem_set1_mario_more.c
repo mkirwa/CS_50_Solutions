@@ -2,8 +2,11 @@
 
 int main(void){
 
+//You cannot decrease the length of a string but you can equate the length of the string to a given variable and then 
+//countinually decrease that variable
+//
 	int n=4;
-	int counter = 0;
+	int counter = n;
 
 	for(int i=0; i<n; i++){
 
@@ -16,11 +19,8 @@ int main(void){
 			else{
 				printf(" ");
 			}
-			counter++;
-			counter=counter; 
 
 		}
 		counter--;
-		n--; 
 	}
 }
