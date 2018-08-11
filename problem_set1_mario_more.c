@@ -5,14 +5,15 @@ int main(void){
 //You cannot decrease the length of a string but you can equate the length of the string to a given variable and then 
 //countinually decrease that variable
 //
+	int num = get_int("enter the number of start ")
 	int n=4;
-	int counter = n;
+	int counter=n;
 
-	for(int i=0; i<n; i++){
+	for(int i=0; i<nun; i++){
 
-		for(int j=0; j<n; j++){
+		for(int j=0; j<num; j++){
 
-			if(the position of the last element >=n){
+			if(counter>=counter){
 
 				printf("#");
 			}
