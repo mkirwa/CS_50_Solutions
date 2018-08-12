@@ -14,7 +14,7 @@ int main(void){
 	do{
 		n=get_int("enter the pyramids height: ");
 	}
-	while(n<0 || n>=23);
+	while(n<=0 || n>=23);
 
 
 	int counter=n-1;
