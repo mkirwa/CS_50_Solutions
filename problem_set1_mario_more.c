@@ -2,24 +2,27 @@
 
 int main(void){
 
+	int n=4;
+	int counter=3;
 
-	int num = get_int("enter the height ");
-	int array[num];
-	int counter=num-1;
+	for(int j=0; j<n; j++){
 
-	for(int i=0; i<num; i++){
-
-		for(int j=0; j<num; j++){
-
-			if(array[j]>=counter){
-
-				printf(" # ");
+		for(int i=0; i<n ;i++){
+			if(counter<=i)
+			{
+				printf("#");
 			}
 			else{
-				printf(" * ");
+			printf(" ");
 			}
 		}
+
 		printf("\n");
 		counter--;
+
+
 	}
+
+
+	
 }
