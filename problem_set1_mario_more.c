@@ -2,7 +2,6 @@
 
 int main(void){
 
-	int main(void){
 
 	int num = get_int("enter the height ");
 	int array[num];
