@@ -6,6 +6,18 @@
 
 int main(void){
 
+//The height should be whatever the user puts in
+//The rows is whatever the user put in * 2 and add 2
+//The height is taken care of by the first for loop
+//rows is taken care of by the second for loop
+
+
+
+
+
+
+
+
 	int n=4;
 	int counter=3;
 	int counter1=0;
