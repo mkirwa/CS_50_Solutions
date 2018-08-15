@@ -16,12 +16,6 @@ int main(void){
 
 
 
-
-
-
-
-
-
 	int n=4;
 	int counter=3;
 	int counter1=0;
