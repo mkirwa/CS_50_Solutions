@@ -14,8 +14,6 @@ int main(void){
 //The pyramids to the left and one that prints the pyramids to the right
 //You will also need two counters one for the right pyramid and one for the left pyramid
 
-
-
 	int n=4;
 	int counter=3;
 	int counter1=0;
