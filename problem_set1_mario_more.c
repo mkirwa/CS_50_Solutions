@@ -10,6 +10,10 @@ int main(void){
 //The rows is whatever the user put in * 2 and add 2
 //The height is taken care of by the first for loop
 //rows is taken care of by the second for loop
+//In the inside loop, you will need two for loops. One that prints
+//The pyramids to the left and one that prints the pyramids to the right
+//You will also need two counters one for the right pyramid and one for the left pyramid
+
 
 
 
