@@ -6,13 +6,13 @@
 
 int main(void){
 
-	//Get the positive integer from the user no greater than 23
+	//Get the positive integer from the user which should be no greater than 23
 	int n;
 
 		do{
 
 			n=get_int("Enter the pyramid's heights, a non-negative integer no greater than 23: ");
-			
+
 		}
 		while(n<=0 || n>=23);
 
