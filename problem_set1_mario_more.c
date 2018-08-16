@@ -5,7 +5,6 @@
 #include <stdlib.h>
 
 int main(void){
-	
 
 	//Get the positive integer from the user which should be no greater than 23
 	int n;
