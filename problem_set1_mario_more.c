@@ -50,9 +50,6 @@ int main(void){
 
 		printf("\n");
 
-
-
 	}
-
 
 }
