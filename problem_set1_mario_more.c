@@ -6,59 +6,53 @@
 
 int main(void){
 
-//The height should be whatever the user puts in
-//The rows is whatever the user put in * 2 and add 2
-//The height is taken care of by the first for loop
-//rows is taken care of by the second for loop
-//In the inside loop, you will need two for loops. One that prints
-//The pyramids to the left and one that prints the pyramids to the right
-//You will also need two counters one for the right pyramid and one for the left pyramid
+	//Get the positive integer from the user no greater than 23
+	int n;
 
-	int n=4;
-	int counter=3;
+		do{
+
+			n=get_int("Enter the pyramid's heights, a non-negative integer no greater than 23: ");
+
+		}
+		while(n<=0 || n>=23);
+
+	//counters to increment and decrement the value of #
+	int counter=n-1;
 	int counter1=0;
 
-	for (int j=0;j<n;j++){
+	//The first for loop that prints the column
+	for(int i=0; i<n; i++){
 
-	for(int i=0;i<n;i++){
+		//Prints rows
+		for(int j=0; j<n; j++){
 
-		if(i>=counter){
-			printf("#");
-			printf("  ");
+			if(counter<=j){
+				printf("#");
+			}
+			else{
+				printf(" ");
+			}
+		}
+		counter--;
 
-
-
-
-						for(int e=0; e<n; e++){
-
-								for(int f=0; f<n; f++){
-
-										if(f<=counter1){
-															printf("#");
-														}
-										else{
-												printf(" ");
-											}
-
-									}
-
-									counter1++;
-									break;
-								}
-
-
-
-
-
-
+		printf("  ");
+		//Prints rows
+		for(int k=0;k<n;k++){
+			if(counter1>=k){
+				printf("#");
+			}
+			else{
+				printf(" ");
+			}
 
 		}
-		else{
-			printf(" ");
-		}
-	}
-	counter--;
-	printf("\n");
+		counter1++;
+
+		printf("\n");
+
+
 
 	}
+
+
 }
