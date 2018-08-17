@@ -3,6 +3,7 @@
 int main(void){
     
     //prompt the user for an amount of change
+         //get the amount in dollars
         //amount must make sense
         //what values are accepted
         //use get_float
