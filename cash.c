@@ -8,6 +8,10 @@ int main(void){
         //amount must make sense
         //what values are accepted
         //use get_float
+    //validate the input
+        //convert the dollar into cts
+        //multiply it by 100 and also round off
+        
     float input;
     
     do{
@@ -17,13 +21,11 @@ int main(void){
     }
     while(input<0);
     
-    input 
+    input = input * 100
     
     count 
     
-    //validate the input
-        //convert the dollar into cts
-        //multiply it by 100 and also round off
+    
         
     //always use the largest coin
     //keep track of coins used
