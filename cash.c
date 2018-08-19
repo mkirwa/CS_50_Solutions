@@ -1,4 +1,4 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <cs50.h>
 
 int main(void){
@@ -65,13 +65,11 @@ int main(void){
         count1++;
         count--;
         //decrease the input by 1
-        input = input - 5;
+        input = input - 1;
     }
 
     //print the final number of coins
 
-    printf("The total number of coins returned to the user is %d \n",count1);
-
-
+    printf("%d\n",count1);
 
 }
