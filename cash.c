@@ -39,6 +39,7 @@ int main(void){
     while(input>=25){
         count1++;
         count--;
+        //decrease the input by 25
     }
     //while(dimes can be used)
         //increase count to be returned to the customer
@@ -46,6 +47,7 @@ int main(void){
     while(input>=10){
         count1++;
         count--;
+        //decrease the input by 10 
     }
     //while(nickels can be used)
         //increase count to be returned to the customer
@@ -53,6 +55,7 @@ int main(void){
     while(input>=5){
         count1++;
         count--;
+        //decrease the input by 5 
     }
     //while(pennies can be used)
         //increase count to be returned to the customer
@@ -60,6 +63,7 @@ int main(void){
     while(input>=1){
         count1++;
         count--;
+        //decrease the input by 1 
     }
     
     //print the final number of coins
