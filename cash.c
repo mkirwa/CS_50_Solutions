@@ -16,14 +16,15 @@ int main(void){
     
     do{
         
-        input = get_float("Please enter the amount to be given out: ");
+        input = get_float("Please enter the amount to be given out in dollars: ");
         
     }
     while(input<0);
     
-    input = input * 100
+    input = input * 100;
     
-    count 
+    count1 = 0;
+    count;
     
     
         
@@ -35,17 +36,35 @@ int main(void){
     //while(quarters can be used)while the amount is greater than or equal to 25cts
         //increase count to be returned to the customer
         //decrease count owned by the user 
+    while(input>=25){
+        count1++;
+        count--;
+    }
     //while(dimes can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user 
+    while(input>=10){
+        count1++;
+        count--;
+    }
     //while(nickels can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user 
+    while(input>=5){
+        count1++;
+        count--;
+    }
     //while(pennies can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user 
+    while(input>=1){
+        count1++;
+        count--;
+    }
     
     //print the final number of coins
+    
+    printf("The total number of coins returned to the user is %f ",count1);
 
 
     
