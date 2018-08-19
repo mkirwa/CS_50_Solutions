@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 #include <cs50.h>
 
 int main(void){
@@ -16,7 +16,7 @@ int main(void){
 
     do{
 
-        input = get_float("Please enter the amount to be given out in dollars: ");
+        input = get_float("Please enter the amount of change owed in dollars: ");
 
     }
     while(input<0);
