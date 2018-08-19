@@ -26,8 +26,6 @@ int main(void){
     int count1 = 0;
     int count = 1000;
 
-
-
     //always use the largest coin
     //keep track of coins used
         //how many coins to be returned
