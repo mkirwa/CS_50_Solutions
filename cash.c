@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
 
 int main(void){
 
@@ -24,7 +25,7 @@ int main(void){
     input = input * 100;
 
     int count1 = 0;
-    int count = 1000;
+
 
     //always use the largest coin
     //keep track of coins used
@@ -36,36 +37,36 @@ int main(void){
         //decrease count owned by the user
     while(input>=25){
         count1++;
-        count--;
+
         //decrease the input by 25
-        input = input - 25;
+        input = roundf(input - 25);
     }
     //while(dimes can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user
     while(input>=10){
         count1++;
-        count--;
+
         //decrease the input by 10
-        input = input - 10;
+        input = roundf(input - 10);
     }
     //while(nickels can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user
     while(input>=5){
         count1++;
-        count--;
+
         //decrease the input by 5
-        input = input - 5;
+        input = roundf(input - 5);
     }
     //while(pennies can be used)
         //increase count to be returned to the customer
         //decrease count owned by the user
     while(input>=1){
         count1++;
-        count--;
+
         //decrease the input by 1
-        input = input - 1;
+        input = roundf(input - 1);
     }
 
     //print the final number of coins
