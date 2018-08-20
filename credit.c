@@ -3,7 +3,13 @@
 
 int main(void){
 
-    //prompts the user for credit card number
+    
+
+    //prompting the user for an input
+    long long int number = get_long_long("enter the credit card number: ");
+    
+    //validate the card
+    
     //multipy every other digit
     //sum those digits
     //add to remaining digits
@@ -11,11 +17,6 @@ int main(void){
     //validate company's identifier
     //validate number's length
     //reports whether it's a valide mastercard, visa card or amex
-
-    //prompting the user for an input
-    
-    //if count 
-    long long int number = get_long_long("enter the credit card number: ");
 
     int count = 0;
 
@@ -28,6 +29,27 @@ int main(void){
     }
 
     printf("Number of digits: %d\n", count);
+
+    if(count==15){
+        if()
+        //the first two numbers are 34 or 35 and the length is 15-digit numbers
+        printf("AMEX\n");
+    }
+
+    if(count==16){
+
+        //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
+
+         printf("MASTERCARD\n");
+
+    }
+
+    if(count==13 || count==16){
+
+        //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
+
+        printf(" VISA\n");
+    }
 
 
     //while (number != 0) {
@@ -42,26 +64,11 @@ int main(void){
        // }
        // while (number/=10);
 
-    //
-    while(count==15){
-        //the first two numbers are 34 or 35 then it's and the length is 15
-        if()
-        
-        // printf("AMEX\n");
-    } 
 
-       
-    while(count==16){
-        
-    }
-    //while(the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers){
 
-       // printf("MASTERCARD\n");
-    //}
-    //while(the first two numbers starts with 4 and the length is 13- or 16-digit numbers){
 
-       // printf(" VISA\n");
-   // }
+
+
     //while(invalid){
         //printf("invalid\n");
     //}
