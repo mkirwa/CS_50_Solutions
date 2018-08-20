@@ -32,7 +32,6 @@ int main(void){
     printf("Number of digits: %d\n", count);
 
     if(count==15){
-        //if()
         //the first two numbers are 34 or 35 and the length is 15-digit numbers
         printf("AMEX\n");
     }
