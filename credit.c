@@ -20,14 +20,27 @@ int main(void){
 
     int count = 0;
 
+    int product = 1;
+    //int sum = 0;
+
     while(number != 0)
     {
         // n = n/10
 
-        printf("%11lld\n",number%10);
+        printf("%lld\n",number%10);
+
         number /= 10;
         count++;
+
+
+        if(count%2==0){
+        product = (number%10)*2;
+       printf(" this is the product: %d\n",product);
+        }
     }
+
+
+    //printf("the sum is :%d", sum);
 
     printf("Number of digits: %d\n", count);
 
