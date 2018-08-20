@@ -3,13 +3,13 @@
 
 int main(void){
 
-    
+
 
     //prompting the user for an input
     long long int number = get_long_long("enter the credit card number: ");
-    
+
     //validate the card
-    
+
     //multipy every other digit
     //sum those digits
     //add to remaining digits
@@ -23,15 +23,16 @@ int main(void){
     while(number != 0)
     {
         // n = n/10
+
+        printf("%11lld\n",number%10);
         number /= 10;
-        printf("%11lld\n",number);
         count++;
     }
 
     printf("Number of digits: %d\n", count);
 
     if(count==15){
-        if()
+        //if()
         //the first two numbers are 34 or 35 and the length is 15-digit numbers
         printf("AMEX\n");
     }
