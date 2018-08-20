@@ -13,6 +13,8 @@ int main(void){
     //reports whether it's a valide mastercard, visa card or amex
 
     //prompting the user for an input
+    
+    //if count 
     long long int number = get_long_long("enter the credit card number: ");
 
     int count = 0;
@@ -40,12 +42,18 @@ int main(void){
        // }
        // while (number/=10);
 
+    //
+    while(count==15){
+        //the first two numbers are 34 or 35 then it's and the length is 15
+        if()
+        
+        // printf("AMEX\n");
+    } 
 
-    //while(the first two numbers are 34 or 35 and the length is 15-digit numbers){
-
-       // printf("AMEX\n");
-  //  }
-
+       
+    while(count==16){
+        
+    }
     //while(the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers){
 
        // printf("MASTERCARD\n");
