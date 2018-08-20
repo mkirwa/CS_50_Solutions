@@ -14,8 +14,19 @@ int main(void){
 
     //prompting the user for an input
     long long int number = get_long_long("enter the credit card number: ");
-    
-    
+
+    int count = 0;
+
+    while(number != 0)
+    {
+        // n = n/10
+        number /= 10;
+        printf("%11lld\n",number);
+        count++;
+    }
+
+    printf("Number of digits: %d\n", count);
+
 
     //while (number != 0) {
       // printf("%11lld\n",number % 10);
