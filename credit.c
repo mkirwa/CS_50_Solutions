@@ -55,71 +55,52 @@ int main(void){
     total_final=total+sum;
 
     if(total_final%10==0){
+            //the first two numbers are 34 or 37 and the length is 15-digit numbers
+            if(count==15){
+                int number2= floor(number1/pow (10,count-2));
 
+                if(number2==34 ||number2 == 37){
+                    printf("AMEX\n");
+                    }
+                else{
+                    printf("INVALID\n");
+                    }
+                 }
+            //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
+            else if(count==16){
+                int number3= floor(number1/ pow(10,count-2));
+                int number4= floor(number1/ pow(10,count-1));
 
-                    if(count==15){
-                            //the first two numbers are 34 or 37 and the length is 15-digit numbers
-                            int number2= floor(number1/pow (10,count-2));
-                            if(number2==34 ||number2 == 37){
-                                printf("AMEX\n");
-                            }
-                            else{
-                                printf("INVALID\n");
-                            }
+                    if(number3==51 ||number3 == 52 || number3==53 || number3==54 || number3==55){
+                        printf("MASTERCARD\n");
+                    }
+                    else if(number4==4) {
+                        printf("VISA\n");
+                    }
+                    else{
+                        printf("INVALID\n");
+                    }
 
-                            }
+                }
+            else if(count==13){
+                //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
+                int number4= floor(number1/ pow(10,count-1));
 
-
-
-                    else if(count==16){
-                            //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
-                            int number3= floor(number1/ pow(10,count-2));
-                            int number4= floor(number1/ pow(10,count-1));
-                            if(number3==51 ||number3 == 52 || number3==53 || number3==54 || number3==55){
-                                printf("MASTERCARD\n");
-
-                            }
-                            else if(number4==4) {
-
-                                printf("VISA\n");
-
-                            }
-                            else{
-                                printf("INVALID\n");
-                            }
-
+                    if(number4==4){
+                            printf("VISA\n");
                         }
-
-                    else if(count==13){
-                            //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
-
-
-                            int number4= floor(number1/ pow(10,count-1));
-                            if(number4==4){
-                                printf("VISA\n");
-
-                            }
-                            else{
-                                printf("INVALID\n");
-                            }
-
-
-                        }
-
-                        else{
-
+                    else{
                             printf("INVALID\n");
                         }
-
-
-
+                }
+                else{
+                    printf("INVALID\n");
+                }
     }
 
     else{
         printf("INVALID\n");
     }
-
-
 
 
 }
