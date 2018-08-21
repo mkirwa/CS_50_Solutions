@@ -20,7 +20,7 @@ int main(void){
 
     int count = 0;
 
-    int product = 1;
+    int product = 0;
     //int sum = 0;
 
     while(number != 0)
