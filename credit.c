@@ -7,6 +7,7 @@ int main(void){
 
     //prompting the user for an input
     long long int number = get_long_long("enter the credit card number: ");
+    long long int number1= number;
 
     //validate the card
 
@@ -55,53 +56,47 @@ int main(void){
 
     //printf("the sum is :%d", sum);
 
-    printf("Number of digits: %d\n", count);
-    printf("sum: %d\n",sum);
+    //printf("Number of digits: %d\n", count);
+    //printf("sum: %d\n",sum);
     int total_final=total+sum;
     printf("total sum: %d\n", total_final);
 
+    //while(total_final !=0){
 
-
-    if(count==15){
-        //the first two numbers are 34 or 35 and the length is 15-digit numbers
-        printf("AMEX\n");
-    }
-
-    if(count==16){
-
-        //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
-
-         printf("MASTERCARD\n");
-
-    }
-
-    if(count==13 || count==16){
-
-        //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
-
-        printf(" VISA\n");
-    }
-
-
-    //while (number != 0) {
-      // printf("%11lld\n",number % 10);
-       //number /= 10;
+        //printf("%d\n",total_final%10);
+       // total_final/=10;
     //}
-        //uint32_t n = 1191223;
+    while(number1!=0){
+        printf("..%lld\n",number1%100);
+        number1=number1/100;
 
-    // do {
-           // long long int number1 = number%10;
-           // printf("%11lld\n",number1);
-       // }
-       // while (number/=10);
+    }
 
-
+    if(total_final%10==0){
 
 
+                    if(count==15 && (number%1000000000000==34 || number%1000000000000==37)){
+                            //the first two numbers are 34 or 35 and the length is 15-digit numbers
+                            printf("AMEX\n");
+                        }
+
+                    if(count==16){
+                            //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
+                            printf("MASTERCARD\n");
+                        }
+
+                    if(count==13 || count==16){
+                            //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
+                            printf(" VISA\n");
+                        }
+
+    }
+
+    else{
+        printf("INVALID\n");
+    }
 
 
-    //while(invalid){
-        //printf("invalid\n");
-    //}
+
 
 }
