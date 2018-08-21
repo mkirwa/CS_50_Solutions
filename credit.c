@@ -2,7 +2,6 @@
 #include <cs50.h>
 
 int main(void){
-
     //prompting the user for an input
     long long int number = get_long_long("enter the credit card number: ");
 
