@@ -56,12 +56,12 @@ int main(void){
     }
 
 
-    printf("the sum is :%d", sum);
+   // printf("the sum is :%d\n", sum);
 
     //printf("Number of digits: %d\n", count);
     //printf("sum: %d\n",sum);
     total_final=total+sum;
-    printf("total sum: %d\n", total_final);
+    //printf("total sum: %d\n", total_final);
 
 
 
@@ -82,7 +82,7 @@ int main(void){
 
 
 
-                    if(count==16){
+                    else if(count==16){
                             //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
                             int number3= floor(number1/100000000000000);
                             int number4= floor(number1/1000000000000000);
@@ -101,7 +101,7 @@ int main(void){
 
                         }
 
-                    if(count==13){
+                    else if(count==13){
                             //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
 
 
@@ -115,6 +115,11 @@ int main(void){
                             }
 
 
+                        }
+
+                        else{
+
+                            printf("INVALID\n");
                         }
 
 
