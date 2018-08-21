@@ -27,22 +27,25 @@ int main(void){
     int total=0;
     int total_final=0;
 
+    //validating check sum
     while(number != 0)
     {
 
-
+        //multiplying every other digit
         count++;
         if(count%2==0){
         product = (number%10)*2;
 
         }
 
+        //suming up product result
         while(product!=0){
             int product1=product%10;
             sum=sum+product1;
             product=product/10;
         }
 
+        //suming up every other digit other that was not used in the product
         if(count%2==1){
             int remainder_num = number%10;
             total=total+remainder_num;
@@ -52,10 +55,14 @@ int main(void){
 
     }
 
+    //suming up the total of the product and the sum of every other digit that was not used in the product
     total_final=total+sum;
 
+    //validating the company's identifier
     if(total_final%10==0){
-            //the first two numbers are 34 or 37 and the length is 15-digit numbers
+            //validating the number's length
+            // if the first two numbers are 34 or 37
+            //and the length is 15-digit numbers then it's a mastercard
             if(count==15){
                 int number2= floor(number1/pow (10,count-2));
 
@@ -66,7 +73,8 @@ int main(void){
                     printf("INVALID\n");
                     }
                  }
-            //the first two numbers are 51 or 52 or 53 or 54 or 55 and the length is 16-digit numbers
+            // if the first two numbers are 51 or 52 or 53 or 54 or 55
+            //and the length is 16-digit numbers then it's a mastercard or visa
             else if(count==16){
                 int number3= floor(number1/ pow(10,count-2));
                 int number4= floor(number1/ pow(10,count-1));
@@ -83,7 +91,8 @@ int main(void){
 
                 }
             else if(count==13){
-                //the first two numbers starts with 4 and the length is 13- or 16-digit numbers
+                //if the first two numbers starts with 4 and the length is 13-
+                //then it's a visa card
                 int number4= floor(number1/ pow(10,count-1));
 
                     if(number4==4){
