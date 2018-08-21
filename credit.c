@@ -9,8 +9,7 @@ int main(void){
     long long int number = get_long_long("enter the credit card number: ");
 
     //validate the card
-
-    //multipy every other digit
+     //multipy every other digit
     //sum those digits
     //add to remaining digits
     //validate check sums
@@ -63,7 +62,6 @@ int main(void){
 
         printf(" VISA\n");
     }
-
 
     //while (number != 0) {
       // printf("%11lld\n",number % 10);
