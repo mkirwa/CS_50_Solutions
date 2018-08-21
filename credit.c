@@ -21,18 +21,31 @@ int main(void){
     int count = 0;
 
     int product = 0;
-    //int sum = 0;
+    int sum = 0;
+    int total=0;
 
     while(number != 0)
     {
         // n = n/10
 
-        printf("%lld\n",number%10);
-        
+        //printf("\n%lld",number%10);
+
         count++;
         if(count%2==0){
         product = (number%10)*2;
-       printf(" this is the product: %d\n",product);
+       //printf("%d\n",product);
+        }
+
+        while(product!=0){
+            int product1=product%10;
+            sum=sum+product1;
+            product=product/10;
+        }
+
+        if(count%2==1){
+            int remainder_num = number%10;
+            //printf("%d\n",remainder_num);
+            total=total+remainder_num;
         }
 
         number /= 10;
@@ -43,6 +56,11 @@ int main(void){
     //printf("the sum is :%d", sum);
 
     printf("Number of digits: %d\n", count);
+    printf("sum: %d\n",sum);
+    int total_final=total+sum;
+    printf("total sum: %d\n", total_final);
+
+
 
     if(count==15){
         //the first two numbers are 34 or 35 and the length is 15-digit numbers
