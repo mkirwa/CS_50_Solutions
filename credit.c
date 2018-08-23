@@ -8,7 +8,6 @@ int main(void){
     long long int number = get_long_long("enter the credit card number: ");
     long long int number1= number;
 
-    
     //validate the card
 
     //multipy every other digit
