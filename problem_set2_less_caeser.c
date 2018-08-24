@@ -30,23 +30,17 @@ int main(int argc, string argv[]){
 
         printf("plaintext: %s\n",plain_text);
 
-
-        //encypher it for them
-        //one character
-        //entire plain text
-        //print cyphertext
-
-
-
-
         //for each character in the plain text string
         for(int j=0; j<length; j++){
 
+            //if alphabetic
            if(isalpha(plain_text[j])){
 
+                //preserve case. All upper case letters should remain upper case
                 if(isupper(plain_text[j])){
                     //convert it to alphabetical indexes - 65
                     //convert it back to ascii
+                    //shift plain text character by key
                      isuppernum = ((int)plain_text[j]-65)+i;
                      isuppernum = isuppernum % 26;
                      array[counter] = isuppernum + 65;
@@ -54,10 +48,11 @@ int main(int argc, string argv[]){
                      counter++;
 
                  }
+                 //all lower case letters should remain lower case
                  if(islower(plain_text[j])){
                     //convert it to alphabetical indexes - 97
                     //convert it back to ascii
-
+                    //shift plain text character by key
                     islowernum = ((int)plain_text[j]-97)+i;
                     islowernum = islowernum % 26;
                     array[counter] = islowernum + 97;
@@ -72,18 +67,11 @@ int main(int argc, string argv[]){
                 counter++;
             }
 
-
             array[counter] = '\0';
 
           }
-
+           //print cypher text
           printf("ciphertext: %s\n",array);
-        //if alphabetic
-            //preserve case. All upper case letters should remain upper case
-            //all lower case letters should remain lower case
-            //shift plain text character by key
-        //print cypher text
-
 
     }
     else{
