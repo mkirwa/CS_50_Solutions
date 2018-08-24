@@ -67,6 +67,11 @@ int main(int argc, string argv[]){
                 }
 
             }
+            else{
+                array[counter]=plain_text[j];
+                counter++;
+            }
+
 
             array[counter] = '\0';
 
@@ -78,7 +83,6 @@ int main(int argc, string argv[]){
             //all lower case letters should remain lower case
             //shift plain text character by key
         //print cypher text
-
 
 
     }
