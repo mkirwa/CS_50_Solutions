@@ -15,7 +15,6 @@ int main(int argc, string argv[]){
         string num = argv[1];
         //atoi(new function) to change string to num
         int i = atoi(num);
-        //printf("%i",i);
         //get the plain text
         //use get_string to prompt the user for a plain text
         string plain_text = get_string("please enter the plain text: ");
