@@ -25,6 +25,8 @@ int main(int argc, string argv[]){
         char array[length+1];
 
         int counter=0;
+        int islowernum = 0;
+        int isuppernum = 0;
 
         printf("plaintext: %s\n",plain_text);
 
@@ -45,15 +47,23 @@ int main(int argc, string argv[]){
                 if(isupper(plain_text[j])){
                     //convert it to alphabetical indexes - 65
                     //convert it back to ascii
-                   array[counter] = 65 + (((int)plain_text[j]-65)+i);
-                    counter++;
+                     isuppernum = ((int)plain_text[j]-65)+i;
+                     isuppernum = isuppernum % 26;
+                     array[counter] = isuppernum + 65;
+
+                     counter++;
 
                  }
                  if(islower(plain_text[j])){
                     //convert it to alphabetical indexes - 97
                     //convert it back to ascii
-                    array[counter] = 97 + (((int)plain_text[j]-97)+i);
+
+                    islowernum = ((int)plain_text[j]-97)+i;
+                    islowernum = islowernum % 26;
+                    array[counter] = islowernum + 97;
+
                     counter++;
+
                 }
 
             }
