@@ -17,6 +17,9 @@ int main(int argc, string argv[]){
         //get the plain text
         //use get_string to prompt the user for a plain text
         string plain_text = get_string();
+        char array[strlen(plain_text)];
+        
+        int counter=0; 
 
         printf("%s",plain_text);
 
@@ -35,9 +38,14 @@ int main(int argc, string argv[]){
             if(isalpha(plain_text)){
             
                 if(isupper(plain_text)){
+                    //convert it to alphabetical indexes - 65
+                    = (int)plain_text[i]-65+i;
+                    
                 
                 }
                 if(islower(plain_text)){
+                    //convert it to alphabetical indexes - 97
+                    = (int)plain_text[i]-97+i;
                 
                 }
             
