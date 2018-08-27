@@ -48,7 +48,6 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
-
                                     //keep track of position in plain text
                                     //keep track of position in key text
 
