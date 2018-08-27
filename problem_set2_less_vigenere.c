@@ -27,6 +27,8 @@ int main(int argc, string argv[]){
         int counter=0;
         int islowernum = 0;
         int isuppernum = 0;
+        int plain_text_num = 0;
+        int key_num = 0;
 
         printf("plaintext: %s\n",plain_text);
 
@@ -46,11 +48,13 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
-                                    
+
                                     //keep track of position in plain text
                                     //keep track of position in key text
-                                    
-                                     isuppernum = ((int)plain_text[j]-65)+((int)key[j]-65);
+
+                                     plain_textnum = (int)plain_text[j]-65;
+                                     key_num = (int)key[j]-65;
+                                     
                                      isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
 
