@@ -56,6 +56,8 @@ int main(int argc, string argv[]){
                                      key_num = (int)key[j]-65;
                                      
                                      //if key[j]==/0 then start over
+                                     //how do you start over?
+                                    
                                      
                                      isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
