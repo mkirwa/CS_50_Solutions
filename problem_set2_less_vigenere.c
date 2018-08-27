@@ -46,9 +46,12 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
+                                    
+                                    //keep track of position in plain text
+                                    //keep track of position in key text
+                                    
                                      isuppernum = ((int)plain_text[j]-65)+((int)key[j]-65);
                                      isuppernum = isuppernum % 26;
-                                        //= ((int)key[j]-65) % length;
                                      array[counter] = isuppernum + 65;
 
                                      counter++;
