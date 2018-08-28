@@ -48,7 +48,7 @@ int main(int argc, string argv[]){
                            if(isalpha(plain_text[j])){
 
                                 //preserve case. All upper case letters should remain upper case
-                                if(isupper(plain_text[j]) && isupper(key[j])){
+                                if(isupper(plain_text[j])){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
@@ -56,9 +56,7 @@ int main(int argc, string argv[]){
                                     //keep track of position in plain text
                                     //keep track of position in key text
 
-                                    isuppernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-65))%26;
-
-
+                                    isuppernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-65));
                                      //if key[j]==/0 then start over
                                      //how do you start over?
 
@@ -71,42 +69,17 @@ int main(int argc, string argv[]){
                                  }
 
                                  //all lower case letters should remain lower case
-                                 if(islower(plain_text[j]) && islower(key[j])){
+                                 if(islower(plain_text[j])){
                                     //convert it to alphabetical indexes - 97
                                     //convert it back to ascii
                                     //shift plain text character by key
-                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97))%26;
+                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97));
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
 
                                     counter++;
 
                                 }
-
-                                if(isupper(plain_text[j]) && islower(key[j])){
-                                    //convert it to alphabetical indexes - 97
-                                    //convert it back to ascii
-                                    //shift plain text character by key
-                                    islowernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-97))%26;
-                                    islowernum = islowernum % 26;
-                                    array[counter] = islowernum + 97;
-
-                                    counter++;
-
-                                }
-
-                                if(islower(plain_text[j]) && isupper(key[j])){
-                                    //convert it to alphabetical indexes - 97
-                                    //convert it back to ascii
-                                    //shift plain text character by key
-                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-65))%26;
-                                    islowernum = islowernum % 26;
-                                    array[counter] = islowernum + 97;
-
-                                    counter++;
-
-                                }
-
 
 
 
