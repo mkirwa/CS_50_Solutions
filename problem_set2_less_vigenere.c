@@ -10,7 +10,7 @@
 //a 2nd command line argument
 int main(int argc, string argv[]){
 
-    if(argc==2){
+    if(argc==2 && isalpha(argc)){
 
         string key = argv[1];
         //atoi(new function) to change string to num
@@ -41,8 +41,9 @@ int main(int argc, string argv[]){
                         //for each character in the plain text string
                         for(int j=0; j<length; j++){
 
+
                             //if alphabetic
-                           if(isalpha(plain_text[j])&&isalpha(key[j])){
+                           if(isalpha(plain_text[j])){
 
                                 //preserve case. All upper case letters should remain upper case
                                 if(isupper(plain_text[j])){
@@ -89,6 +90,8 @@ int main(int argc, string argv[]){
                             }
 
                             array[counter] = '\0';
+
+
 
                           }
                            //print cypher text
