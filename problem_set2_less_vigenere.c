@@ -10,7 +10,7 @@
 //a 2nd command line argument
 int main(int argc, string argv[]){
 
-    if(argc==2 || isalpha(argc)){
+    if(argc==2){
 
         string key = argv[1];
         //atoi(new function) to change string to num
