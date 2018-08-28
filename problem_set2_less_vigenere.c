@@ -15,6 +15,70 @@ int main(int argc, string argv[]){
     if(argc==2){
 
         string key = argv[1];
+        int length1 = strlen(key);
+        int counter1=0;
+
+
+        for(int m=0; m<length1; m++){
+            //loop through the key
+            //if you find a letter that is not alphabetic,
+            //exit and return 1 else store the string in an array counter called key
+            //print the key...
+
+            if(isalpha(key[m])){
+
+                 key[counter1]=key[m];
+
+            }
+            else{
+                printf("invalid!");
+                return 1;
+            }
+
+            counter1++;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //atoi(new function) to change string to num
         //int i = atoi(num);
         //get the plain text
@@ -22,7 +86,6 @@ int main(int argc, string argv[]){
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
-        int length1 = strlen(key);
         //int length1 = strlen(key);
 
         char array[length+1];
@@ -142,6 +205,32 @@ int main(int argc, string argv[]){
                           printf("ciphertext: %s\n",array);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     else
         {
@@ -150,3 +239,4 @@ int main(int argc, string argv[]){
         }
 
 }
+
