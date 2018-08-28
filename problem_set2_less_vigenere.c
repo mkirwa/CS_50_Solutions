@@ -48,16 +48,17 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
+
                                     //keep track of position in plain text
                                     //keep track of position in key text
 
-                                     plain_textnum = (int)plain_text[j]-65;
-                                     key_num = (int)key[j]-65;
-                                     
+                                     plain_text_num = (int)plain_text[j]-65;
+                                     key_num = ((int)key[j]%6)-65;
+
                                      //if key[j]==/0 then start over
                                      //how do you start over?
-                                    
-                                     
+
+
                                      isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
 
@@ -69,7 +70,7 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 97
                                     //convert it back to ascii
                                     //shift plain text character by key
-                                    islowernum = ((int)plain_text[j]-97)+(((int)key[j]-97))%26;
+                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%6])-97))%26;
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
 
