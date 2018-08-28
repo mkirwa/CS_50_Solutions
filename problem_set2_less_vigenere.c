@@ -20,6 +20,7 @@ int main(int argc, string argv[]){
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
+        int length1 = strlen(key);
         //int length1 = strlen(key);
 
         char array[length+1];
@@ -27,8 +28,8 @@ int main(int argc, string argv[]){
         int counter=0;
         int islowernum = 0;
         int isuppernum = 0;
-        int plain_text_num = 0;
-        int key_num = 0;
+        //int plain_text_num = 0;
+        //int key_num = 0;
 
         printf("plaintext: %s\n",plain_text);
 
@@ -41,7 +42,7 @@ int main(int argc, string argv[]){
                         for(int j=0; j<length; j++){
 
                             //if alphabetic
-                           if(isalpha(plain_text[j])){
+                           if(isalpha(plain_text[j])&&isalpha(key[j])){
 
                                 //preserve case. All upper case letters should remain upper case
                                 if(isupper(plain_text[j])){
@@ -52,8 +53,8 @@ int main(int argc, string argv[]){
                                     //keep track of position in plain text
                                     //keep track of position in key text
 
-                                     plain_text_num = (int)plain_text[j]-65;
-                                     key_num = ((int)key[j]%6)-65;
+                                    isuppernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-65))%26;
+
 
                                      //if key[j]==/0 then start over
                                      //how do you start over?
@@ -70,7 +71,7 @@ int main(int argc, string argv[]){
                                     //convert it to alphabetical indexes - 97
                                     //convert it back to ascii
                                     //shift plain text character by key
-                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%6])-97))%26;
+                                    islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97))%26;
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
 
