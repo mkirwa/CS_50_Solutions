@@ -10,7 +10,7 @@
 //a 2nd command line argument
 int main(int argc, string argv[]){
 
-    if(argc==2 && isalpha(argc)){
+    if(argc==2 || isalpha(argc)){
 
         string key = argv[1];
         //atoi(new function) to change string to num
@@ -97,15 +97,6 @@ int main(int argc, string argv[]){
                            //print cypher text
                           printf("ciphertext: %s\n",array);
 
-                    //}
-                    //else
-                   // {
-                       // printf("invalid!");
-                        return 1;
-                    //}
-
-
-             //}
 
         }
     else
