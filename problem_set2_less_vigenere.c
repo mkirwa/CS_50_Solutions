@@ -39,6 +39,46 @@ int main(int argc, string argv[]){
 
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //atoi(new function) to change string to num
         //int i = atoi(num);
         //get the plain text
@@ -178,6 +218,14 @@ int main(int argc, string argv[]){
                           }
                            //print cypher text
                           printf("ciphertext: %s\n",array);
+
+
+
+
+
+
+
+
 
 
         }
