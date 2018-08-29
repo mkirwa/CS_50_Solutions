@@ -15,7 +15,6 @@ int main(int argc, string argv[]){
         int length1 = strlen(key);
         int counter1=0;
 
-
         for(int m=0; m<length1; m++){
             //loop through the key
             //if you find a letter that is not alphabetic,
@@ -34,8 +33,7 @@ int main(int argc, string argv[]){
             counter1++;
 
         }
-
-        //use get_string to prompt the user for a plain text
+    //use get_string to prompt the user for a plain text
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
