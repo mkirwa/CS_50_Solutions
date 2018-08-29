@@ -116,7 +116,6 @@ int main(int argc, string argv[]){
                           }
                            //print cypher text
                           printf("ciphertext: %s\n",array);
-
         }
     else
         {
