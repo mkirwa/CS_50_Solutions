@@ -91,9 +91,7 @@ int main(int argc, string argv[]){
                                     islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97));
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
-
                                     counter++;
-
                                 }
 
                                 if(isupper(plain_text[j]) && islower(key[j%length1])){
