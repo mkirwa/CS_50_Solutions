@@ -23,7 +23,6 @@ int main(int argc, string argv[]){
             //loop through the key
             //if you find a letter that is not alphabetic,
             //exit and return 1 else store the string in an array counter called key
-            //print the key...
 
             if(isalpha(key[m])){
 
@@ -39,31 +38,19 @@ int main(int argc, string argv[]){
 
         }
 
-        //atoi(new function) to change string to num
-        //int i = atoi(num);
-        //get the plain text
         //use get_string to prompt the user for a plain text
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
-        //int length1 = strlen(key);
 
         char array[length+1];
 
         int counter=0;
         int islowernum = 0;
         int isuppernum = 0;
-        //int plain_text_num = 0;
-        //int key_num = 0;
 
         printf("plaintext: %s\n",plain_text);
 
-        //for(int k=0; k<length; k++){
-
-
-            //if(isalpha(key[k])){
-
-                        //for each character in the plain text string
                         for(int j=0; j<length; j++){
 
 
@@ -79,20 +66,12 @@ int main(int argc, string argv[]){
                                     //keep track of position in plain text
                                     //keep track of position in key text
 
-
                                     isuppernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-65));
-                                     //if key[j]==/0 then start over
-                                     //how do you start over?
-
-
-                                     isuppernum = isuppernum % 26;
+                                    isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
-
                                      counter++;
 
                                  }
-
-                                 ///correction
 
                                  if(islower(plain_text[j]) && isupper(key[j%length1])){
                                     //convert it to alphabetical indexes - 65
@@ -103,9 +82,6 @@ int main(int argc, string argv[]){
                                     //keep track of position in key text
 
                                     isuppernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-65));
-                                     //if key[j]==/0 then start over
-                                     //how do you start over?
-
                                      isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 97;
 
@@ -117,9 +93,6 @@ int main(int argc, string argv[]){
                                  if(islower(plain_text[j]) && islower(key[j%length1])){
                                     //convert it to alphabetical indexes - 97
                                     //convert it back to ascii
-                                    //shift plain text character by key
-
-
                                     islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97));
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
@@ -128,21 +101,11 @@ int main(int argc, string argv[]){
 
                                 }
 
-                                //correction
                                 if(isupper(plain_text[j]) && islower(key[j%length1])){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
-
-                                    //keep track of position in plain text
-                                    //keep track of position in key text
-
-
                                     isuppernum = ((int)plain_text[j]-65)+((((int)key[j%length1])-97));
-                                     //if key[j]==/0 then start over
-                                     //how do you start over?
-
-
                                      isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
 
@@ -150,19 +113,12 @@ int main(int argc, string argv[]){
 
                                  }
 
-
-
                             }
-
                             else{
                                 array[counter]=plain_text[j];
                                 counter++;
                             }
-
                             array[counter] = '\0';
-
-
-
                           }
                            //print cypher text
                           printf("ciphertext: %s\n",array);
