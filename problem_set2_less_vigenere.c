@@ -105,7 +105,6 @@ int main(int argc, string argv[]){
                                      array[counter] = isuppernum + 65;
 
                                      counter++;
-
                                  }
 
                             }
