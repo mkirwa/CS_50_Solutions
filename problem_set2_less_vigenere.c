@@ -122,7 +122,9 @@ int main(int argc, string argv[]){
                             }
                             else{
                                 array[counter]=plain_text[j];
-                                //key[j]=key[j]+1;
+                                //Whenever it meets a plain text that is not alphabetic
+                                //increment the position of the key
+                                key[j%length1]++;
                                 //counter++;
 
                             }
