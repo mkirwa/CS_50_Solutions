@@ -122,7 +122,7 @@ int main(int argc, string argv[]){
                             }
                             else{
                                 array[counter]=plain_text[j];
-                                key[j%length1]=key[j%length1]+1;
+                                //key[j]=key[j]+1;
                                 //counter++;
 
                             }
