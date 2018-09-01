@@ -53,8 +53,7 @@ int main(int argc, string argv[]){
 
         printf("plaintext: %s\n",plain_text);
 
-                        for(int j=0; j<length; j++){
-
+                        for(int j=0; j<length ; j++){
 
                             //if alphabetic
                            if(isalpha(plain_text[j])){
@@ -123,9 +122,9 @@ int main(int argc, string argv[]){
                             else{
                                 array[counter]=plain_text[j];
                                 //Whenever it meets a plain text that is not alphabetic
-                                //increment the position of the key
-                                key[j%length1]++;
-                                //counter++;
+                                //assign the the key to the next available alphabetic letter
+                                //
+
 
                             }
                             array[counter] = '\0';
