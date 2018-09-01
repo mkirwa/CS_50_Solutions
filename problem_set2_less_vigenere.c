@@ -59,7 +59,7 @@ int main(int argc, string argv[]){
                            if(isalpha(plain_text[j])){
 
                                 //preserve case. All upper case letters should remain upper case
-                                if(isupper(plain_text[j])){
+                                if(isupper(plain_text[j]) && isupper(key[j%length1])){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
@@ -123,7 +123,10 @@ int main(int argc, string argv[]){
                                 array[counter]=plain_text[j];
                                 //Whenever it meets a plain text that is not alphabetic
                                 //assign the the key to the next available alphabetic letter
-                                //
+                                //how do we assign the key to the next alphabetic letter
+                                    //by moving the position of the key to next position of plain_text
+                                    //how???
+                                counter++;
 
 
                             }
