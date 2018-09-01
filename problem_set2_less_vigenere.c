@@ -1,9 +1,13 @@
+
 #include <stdio.h>
 #include <cs50.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <ctype.h>
 #include <string.h>
+
+
+
 //getting the key from the user using
 //a 2nd command line argument
 int main(int argc, string argv[]){
@@ -13,6 +17,7 @@ int main(int argc, string argv[]){
         string key = argv[1];
         int length1 = strlen(key);
         int counter1=0;
+
 
         for(int m=0; m<length1; m++){
             //loop through the key
@@ -32,14 +37,17 @@ int main(int argc, string argv[]){
             counter1++;
 
         }
-    //use get_string to prompt the user for a plain text
+
+        //use get_string to prompt the user for a plain text
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
 
         char array[length+1];
+       // char array1[length1+2];
 
         int counter=0;
+       // int counter2=0;
         int islowernum = 0;
         int isuppernum = 0;
 
@@ -64,6 +72,7 @@ int main(int argc, string argv[]){
                                     isuppernum = isuppernum % 26;
                                      array[counter] = isuppernum + 65;
                                      counter++;
+                                     //counter2++;
 
                                  }
 
@@ -80,6 +89,7 @@ int main(int argc, string argv[]){
                                      array[counter] = isuppernum + 97;
 
                                      counter++;
+                                     //counter2++;
 
                                  }
 
@@ -90,7 +100,10 @@ int main(int argc, string argv[]){
                                     islowernum = ((int)plain_text[j]-97)+((((int)key[j%length1])-97));
                                     islowernum = islowernum % 26;
                                     array[counter] = islowernum + 97;
+
                                     counter++;
+                                    //counter2++;
+
                                 }
 
                                 if(isupper(plain_text[j]) && islower(key[j%length1])){
@@ -102,17 +115,23 @@ int main(int argc, string argv[]){
                                      array[counter] = isuppernum + 65;
 
                                      counter++;
+                                     //counter2++;
+
                                  }
 
                             }
                             else{
                                 array[counter]=plain_text[j];
-                                counter++;
+                                key[j%length1]=key[j%length1]+1;
+                                //counter++;
+
                             }
                             array[counter] = '\0';
+                            //array1[counter2] = '\0';
                           }
                            //print cypher text
                           printf("ciphertext: %s\n",array);
+
         }
     else
         {
