@@ -59,7 +59,7 @@ int main(int argc, string argv[]){
                            if(isalpha(plain_text[j])){
 
                                 //preserve case. All upper case letters should remain upper case
-                                if(isupper(plain_text[j]) && isupper(key[j%length1])){
+                                if(isupper(plain_text[j])){
                                     //convert it to alphabetical indexes - 65
                                     //convert it back to ascii
                                     //shift plain text character by key
