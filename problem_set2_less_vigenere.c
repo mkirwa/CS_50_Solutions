@@ -47,7 +47,7 @@ int main(int argc, string argv[]){
        // char array1[length1+2];
 
         int counter=0;
-       // int counter2=0;
+        int counter2=0;
         int islowernum = 0;
         int isuppernum = 0;
 
@@ -126,10 +126,15 @@ int main(int argc, string argv[]){
                                 //how do we assign the key to the next alphabetic letter
                                     //by moving the position of the key to next position of plain_text
                                     //how???
+                                    //store the value of j until you meet the next alphabetic letter but how??
+                                        //create another counter then increment that counter whenever you
+                                        //meet a non alphabetic letter
+                                        //decrement the position of the key by that counter
+                                counter2++;
                                 counter++;
-
-
+                                key[j%length1]=key[j%length1]-counter2;
                             }
+
                             array[counter] = '\0';
                             //array1[counter2] = '\0';
                           }
