@@ -53,12 +53,10 @@ int main(int argc, string argv[]){
 
         printf("plaintext: %s\n",plain_text);
 
-                        for(int j=0; j<length ; j++){
+                        for(int j=0; j<length; j++){
 
-                            int y = j%length1;
+                            int y = (j-counter2)%length1;
 
-                            if(isalpha(plain_text[j-counter2])){
-                                 //if alphabetic
                                            if(isalpha(plain_text[j])){
 
                                                 //preserve case. All upper case letters should remain upper case
@@ -140,96 +138,6 @@ int main(int argc, string argv[]){
                                                 counter++;
                                                 counter2++;
                                             }
-
-                            }
-                            else{
-
-                                y=(j-counter2)%length1;
-
-                                 //if alphabetic
-                                           if(isalpha(plain_text[j])){
-
-                                                //preserve case. All upper case letters should remain upper case
-                                                if(isupper(plain_text[j]) && isupper(key[y])){
-                                                    //convert it to alphabetical indexes - 65
-                                                    //convert it back to ascii
-                                                    //shift plain text character by key
-
-                                                    //keep track of position in plain text
-                                                    //keep track of position in key text
-
-                                                    isuppernum = ((int)plain_text[j]-65)+((((int)key[y])-65));
-                                                    isuppernum = isuppernum % 26;
-                                                     array[counter] = isuppernum + 65;
-                                                     counter++;
-                                                     //counter2++;
-
-                                                 }
-
-                                                 if(islower(plain_text[j]) && isupper(key[y])){
-                                                    //convert it to alphabetical indexes - 65
-                                                    //convert it back to ascii
-                                                    //shift plain text character by key
-
-                                                    //keep track of position in plain text
-                                                    //keep track of position in key text
-
-                                                    isuppernum = ((int)plain_text[j]-97)+((((int)key[y])-65));
-                                                     isuppernum = isuppernum % 26;
-                                                     array[counter] = isuppernum + 97;
-
-                                                     counter++;
-                                                     //counter2++;
-
-                                                 }
-
-                                                 //all lower case letters should remain lower case
-                                                 if(islower(plain_text[j]) && islower(key[y])){
-                                                    //convert it to alphabetical indexes - 97
-                                                    //convert it back to ascii
-                                                    islowernum = ((int)plain_text[j]-97)+((((int)key[y])-97));
-                                                    islowernum = islowernum % 26;
-                                                    array[counter] = islowernum + 97;
-
-                                                    counter++;
-                                                    //counter2++;
-
-                                                }
-
-                                                if(isupper(plain_text[j]) && islower(key[y])){
-                                                    //convert it to alphabetical indexes - 65
-                                                    //convert it back to ascii
-                                                    //shift plain text character by key
-                                                    isuppernum = ((int)plain_text[j]-65)+((((int)key[y])-97));
-                                                     isuppernum = isuppernum % 26;
-                                                     array[counter] = isuppernum + 65;
-
-                                                     counter++;
-                                                     //counter2++;
-
-                                                 }
-
-                                            }
-                                            else{
-                                                array[counter]=plain_text[j];
-                                                //Whenever it meets a plain text that is not alphabetic
-                                                //assign the the key to the next available alphabetic letter
-                                                //how do we assign the key to the next alphabetic letter
-                                                    //by moving the position of the key to next position of plain_text
-                                                    //how???
-                                                    //store the value of j until you meet the next alphabetic letter but how??
-                                                        //create another counter then increment that counter whenever you
-                                                        //meet a non alphabetic letter
-                                                        //decrement the position of the key by that counter
-                                                            //will not work because the value of J will still
-                                                            //be incremented!!
-                                                                //what do we do now???
-                                                                //there has to be a solution!!
-                                                counter++;
-                                                counter2++;
-                                            }
-
-                            }
 
                             array[counter] = '\0';
                             //array1[counter2] = '\0';
