@@ -21,7 +21,7 @@ int main(int argc, string argv[]){
             //if you find a letter that is not alphabetic,
             //exit and return 1 else store the string in an array counter called key
             if(isalpha(key[m])){
-
+                //storing the string elements in the counter
                  key[counter1]=key[m];
 
             }
@@ -39,12 +39,17 @@ int main(int argc, string argv[]){
         string plain_text = get_string("please enter the plain text: ");
 
         int length = strlen(plain_text);
-
+        //creating space for string elements and a /0 that indicates the end of a string
+        //Add 1 to take care of the /0
         char array[length+1];
-
+        //counter to store the ciphertext
         int counter=0;
+        //counter2 keeps track of the key values upon an encounter of
+        //a non alphabetic letter
         int counter2=0;
+        //stores the alphabetic value of the lower case alphabets
         int islowernum = 0;
+        //stores the alphabetic value of the upper case alphabets
         int isuppernum = 0;
 
         printf("plaintext: %s\n",plain_text);
@@ -52,75 +57,69 @@ int main(int argc, string argv[]){
         for(int j=0; j<length; j++){
 
         int y = (j-counter2)%length1;
-
+        //checks if the character is an alphabet
         if(isalpha(plain_text[j])){
 
-            //preserve case. All upper case letters should remain upper case
+            //checks if the both the plaintext and the key character are all upper cases,
             if(isupper(plain_text[j]) && isupper(key[y])){
             //convert it to alphabetical indexes - 65
-            //convert it back to ascii
             //shift plain text character by key
-            //keep track of position in plain text
-            //keep track of position in key text
             isuppernum = ((int)plain_text[j]-65)+((((int)key[y])-65));
             isuppernum = isuppernum % 26;
+            //convert it back to ascii and store it in array
             array[counter] = isuppernum + 65;
             counter++;
             }
-
+            //checks if the plaintext character is lower case and if
+            //the key character is uppercase
             if(islower(plain_text[j]) && isupper(key[y])){
-            //convert it to alphabetical indexes - 65
-            //convert it back to ascii
+            //convert it to alphabetical indexes - 97
+            //convert it to alphabetical indexes -65
             //shift plain text character by key
-            //keep track of position in plain text
-            //keep track of position in key text
             isuppernum = ((int)plain_text[j]-97)+((((int)key[y])-65));
             isuppernum = isuppernum % 26;
+            //convert it back to ascii and store it in array
             array[counter] = isuppernum + 97;
             counter++;
             }
-            //all lower case letters should remain lower case
+            //checks if both the plain text and if the key characters are all lowercases
             if(islower(plain_text[j]) && islower(key[y])){
             //convert it to alphabetical indexes - 97
-            //convert it back to ascii
+            //shift plain text character by key
             islowernum = ((int)plain_text[j]-97)+((((int)key[y])-97));
             islowernum = islowernum % 26;
+            //convert it back to ascii
             array[counter] = islowernum + 97;
             counter++;
             }
-
+            //checks if the plain text character is upper case and
+            //if the key character is lower case
             if(isupper(plain_text[j]) && islower(key[y])){
             //convert it to alphabetical indexes - 65
-            //convert it back to ascii
+            //convert it to alphabetical indexes -97
             //shift plain text character by key
             isuppernum = ((int)plain_text[j]-65)+((((int)key[y])-97));
             isuppernum = isuppernum % 26;
+            //convert it back to ascii
             array[counter] = isuppernum + 65;
             counter++;
             }
 
         }
         else{
+            //if the plain text is not an alphabet
+            //store it in the array
             array[counter]=plain_text[j];
-            //Whenever it meets a plain text that is not alphabetic
-            //assign the the key to the next available alphabetic letter
-            //how do we assign the key to the next alphabetic letter
-            //by moving the position of the key to next position of plain_text
-            //how???
-            //store the value of j until you meet the next alphabetic letter but how??
-            //create another counter then increment that counter whenever you
-            //meet a non alphabetic letter
-            //decrement the position of the key by that counter
-            //will not work because the value of J will still
-            //be incremented!!
-            //what do we do now???
-            //there has to be a solution!!
+            //counter to store the value of the plaintext
+            //and the ciphertext
             counter++;
+            //counter to keep track of the position of the key
+            //makes sure the position of the key shifts to the alphabetical
+            //plaintext and at the encounter of the non-alphabetical plain text
             counter2++;
             }
-
+        //signals the end of the string
         array[counter] = '\0';
-        //array1[counter2] = '\0';
         }
         //print cypher text
         printf("ciphertext: %s\n",array);
@@ -128,6 +127,8 @@ int main(int argc, string argv[]){
         }
     else
         {
+            //if there are not two arguments
+            //the entry is invalid
             printf("invalid!");
             return 1;
         }
