@@ -15,6 +15,9 @@ int main(void){
 	//accidentals adjust notes up or down one semitone
 	//so the sharp(#) accidental represented here by one pound sign means
 	//we are going to move up one semitone
+	//Up one semitone from c is c#(the black keyboard above c) and from D will be D#
+	//you can also represent notes as flats where one flat means move it down by one semitone
 	//
+
 	
 }
