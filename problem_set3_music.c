@@ -17,7 +17,7 @@ int main(void){
 	//we are going to move up one semitone
 	//Up one semitone from c is c#(the black keyboard above c) and from D will be D#
 	//you can also represent notes as flats where one flat means move it down by one semitone
-	//
+	//so db is one semitone down from d
 
 	
 }
