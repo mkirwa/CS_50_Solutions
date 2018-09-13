@@ -19,8 +19,10 @@ int main(void){
 	//you can also represent notes as flats where one flat means move it down by one semitone
 	//so db is one semitone down from d
 
-	
 
+	//you will have to download it, read and understand it
+
+	
 
 	
 }
