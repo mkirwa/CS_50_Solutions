@@ -1,6 +1,7 @@
 // Prints frequencies of and outputs WAV file with all notes in an octave
 //This program only prints the frequencies (in Hz) of all of the notes in an octave
 //outputs a WAV file (an audio file) via which you can hear those same notes.
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -12,7 +13,6 @@
 const string NOTES[] = {"C", "C#", "D", "D#", "E", "F",
                         "F#", "G", "G#", "A", "A#", "B"
                        };
-
 // Default octave
 #define OCTAVE 4
 
@@ -39,9 +39,11 @@ int main(int argc, string argv[])
     song s = song_open("notes.wav");
 
     // Add each semitone
+    //why divide sizeof(NOTES) by sizeof(string)? Is that the way to get the length of the semitone?
     for (int i = 0, n = sizeof(NOTES) / sizeof(string); i < n; i++)
     {
         // Append octave to note
+        //why create space for 4 notes?
         char note[4];
         sprintf(note, "%s%i", NOTES[i], octave);
 
