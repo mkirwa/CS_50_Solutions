@@ -44,9 +44,10 @@ int main(int argc, string argv[])
     {
         //Append octave to note
         //why create space for 4 notes?
-        //sprintf makes sure that the output is assigned to a screen
+        //sprintf makes sure that the output is stored on the string s
         //but is not printed on the console
         //the note, facilitates the storage in the spaces set aside
+        //We’re using it in order to create a string from two placeholders, %s and %i.
         char note[4];
         sprintf(note, "%s%i", NOTES[i], octave);
 
@@ -62,5 +63,4 @@ int main(int argc, string argv[])
 
     // Close file
     song_close(s);
-    
 }
