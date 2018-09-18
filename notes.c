@@ -42,8 +42,11 @@ int main(int argc, string argv[])
     //why divide sizeof(NOTES) by sizeof(string)? Is that the way to get the length of the semitone?
     for (int i = 0, n = sizeof(NOTES) / sizeof(string); i < n; i++)
     {
-        // Append octave to note
+        //Append octave to note
         //why create space for 4 notes?
+        //sprintf makes sure that the output is assigned to a screen
+        //but is not printed on the console
+        //the note, facilitates the storage in the spaces set aside
         char note[4];
         sprintf(note, "%s%i", NOTES[i], octave);
 
@@ -59,4 +62,5 @@ int main(int argc, string argv[])
 
     // Close file
     song_close(s);
+    
 }
