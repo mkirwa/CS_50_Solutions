@@ -1,4 +1,6 @@
 // Prints frequencies of and outputs WAV file with all notes in an octave
+//This program only prints the frequencies (in Hz) of all of the notes in an octave
+//outputs a WAV file (an audio file) via which you can hear those same notes.
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
