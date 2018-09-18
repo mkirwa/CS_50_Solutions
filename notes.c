@@ -1,6 +1,7 @@
 // Prints frequencies of and outputs WAV file with all notes in an octave
 
 
+
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
