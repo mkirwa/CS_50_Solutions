@@ -2,6 +2,7 @@
 
 #include <cs50.h>
 
+
 #include "helpers.h"
 
 // Converts a fraction formatted as X/Y to eighths
