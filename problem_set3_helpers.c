@@ -26,7 +26,6 @@ int duration(string fraction)
 //rounded to the nearest integer;
 int frequency(string note)
 {
-    
     // TODO
     //this function should take as input as a string a note (e.g., A4)
     //and return its corresponding frequency in hertz as an int.
