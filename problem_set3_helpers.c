@@ -18,6 +18,7 @@ int duration(string fraction)
     
     //X and Y should be positive decimal digits if not then return 1
     //Y should be a power of 2 if not then return 1
+    //Input is a string  and it should be converted into some integral number of eights!
     
     
 }
