@@ -4,6 +4,9 @@
 
 #include "helpers.h"
 
+#include <stdlib.h>
+
+
 // Converts a fraction formatted as X/Y to eighths
 //takes as input string a fraction (e.g., 1/4) 
 //and return as an int a corresponding number of eigths
@@ -19,6 +22,14 @@ int duration(string fraction)
     //X and Y should be positive decimal digits if not then return 1
     //Y should be a power of 2 if not then return 1
     //Input is a string  and it should be converted into some integral number of eights!
+        //what exactly does the user type in?
+    
+    string fraction = get_string("enter the whatever");
+    int converted = atoi("fraction");
+    
+    //I need to know if the 
+
+    
     
     
 }
