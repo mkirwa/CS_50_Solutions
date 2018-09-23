@@ -15,6 +15,11 @@ int duration(string fraction)
     //and convert it into some integral number of eighths. You may
     //assume that duration will only be passed a string formatted as X/Y,
     //whereby each of X and Y is a positive decimal digit, and Y is, moreover, a power of 2.
+    
+    //X and Y should be positive decimal digits if not then return 1
+    //Y should be a power of 2 if not then return 1
+    
+    
 }
 
 // Calculates frequency (in Hz) of a note
