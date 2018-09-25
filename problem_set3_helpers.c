@@ -41,7 +41,6 @@ int duration(string fraction)
 //Y is # or b, and Z is any of 0 through 8,
 //and return as an int the note’s corresponding frequency,
 
-
 //rounded to the nearest integer;
 int frequency(string note)
 {
