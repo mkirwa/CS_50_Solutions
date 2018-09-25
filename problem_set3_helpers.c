@@ -33,7 +33,6 @@ int duration(string fraction)
 
 
 }
-
 // Calculates frequency (in Hz) of a note
 //take as input as a string a note formatted as XY (e.g., A4),
 //where X is any of A through G and Y is any of 0 through 8, or
