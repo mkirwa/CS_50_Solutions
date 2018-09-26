@@ -15,7 +15,7 @@ int main(void){
 
     string word = get_string("enter the word: ");
     duration(word);
-    printf("converted word: %s\n",word);
+    printf("converted: %s\n",word);
 
 }
 
