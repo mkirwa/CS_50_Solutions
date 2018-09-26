@@ -15,7 +15,7 @@ int main(void){
 
     string word = get_string("enter the word: ");
     duration(word);
-    printf("converted: %s\n",word);
+    printf("converted : %s\n",word);
 
 }
 
@@ -33,11 +33,8 @@ int duration(string fraction)
         //what exactly does the user type in?
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
 
-    int converted;
+    return(atoi(fraction));
 
-    converted = atoi(fraction);
-
-    return converted;
 
 
 }
