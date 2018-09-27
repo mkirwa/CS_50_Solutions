@@ -47,7 +47,6 @@ int main(void){
         array[count]='/0';
         
         
-    
     //if that character is a number
         //if Y is a power of 2
             //convert it into some integral number of eighths
