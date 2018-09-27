@@ -56,7 +56,6 @@ int main(void){
     //else store that character 
     //print the stored number
     
-    
 
 }
 
