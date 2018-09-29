@@ -36,16 +36,13 @@ int main(void){
         int count = 0;
 
         for(int i=0; i<num; i++){
-
             array[counter]=array[i];
-
             count++;
-
         }
 
         array[count]='/0';
 
-
+        printf("this is it: ",array);
 
     //if that character is a number
         //if Y is a power of 2
