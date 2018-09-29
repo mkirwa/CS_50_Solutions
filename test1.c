@@ -53,9 +53,6 @@ int main(void){
     //print the stored number
 
 
-
-
-
 }
 
 int duration(string fraction)
