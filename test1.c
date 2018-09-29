@@ -54,6 +54,8 @@ int main(void){
 
 
 
+
+
 }
 
 int duration(string fraction)
