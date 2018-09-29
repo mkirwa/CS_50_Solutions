@@ -4,6 +4,11 @@
 #include "helpers.h"
 
 #include <stdlib.h>
+#include <string.h>
+
+#include <ctype.h>
+
+
 
 
 // Converts a fraction formatted as X/Y to eighths
@@ -30,19 +35,19 @@ int main(void){
 
     //create a space for each character in the string
     //store the characters in the spaces created
-        int num = word.length;
-        int array[num+1];
+        int num = strlen(word);
+        char array[num+1];
 
         int count = 0;
 
         for(int i=0; i<num; i++){
-            array[counter]=array[i];
+            array[count]=word[i];
             count++;
         }
 
-        array[count]='/0';
+        array[count]='\0';
 
-        printf("this is it: ",array);
+        printf("this is it: %s",array);
 
     //if that character is a number
         //if Y is a power of 2
@@ -53,10 +58,11 @@ int main(void){
     //print the stored number
 
 
+
 }
 
-int duration(string fraction)
-{
+//int duration(string fraction)
+//{
     // TODO
     //this function should take as input as a string a fraction
     //and convert it into some integral number of eighths. You may
@@ -69,8 +75,8 @@ int duration(string fraction)
         //what exactly does the user type in?
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
 
-    return(atoi(fraction));
+    //return(atoi(fraction));
 
 
 
-}
+//}
