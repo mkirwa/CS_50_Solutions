@@ -12,7 +12,7 @@
 //(2, in this case, since 1/4 is equivalent to 2/8)
 int duration(string fraction);
 int main(void){
-    
+
      // TODO
     //this function should take as input as a string a fraction
     //and convert it into some integral number of eighths. You may
@@ -27,32 +27,35 @@ int main(void){
 
 
     string word = get_string("enter the word: ");
-    int converted = atoi(word);
-    printf("converted : %i\n",converted);
-    
-    //create a space for each character in the string 
+
+    //create a space for each character in the string
     //store the characters in the spaces created
-        int num = word.length; 
+        int num = word.length;
         int array[num+1];
-        
+
         int count = 0;
-    
+
         for(int i=0; i<num; i++){
-                        
-            
+
+            array[counter]=array[i];
+
+            count++;
+
         }
-        
+
         array[count]='/0';
-        
-        
+
+
+
     //if that character is a number
         //if Y is a power of 2
             //convert it into some integral number of eighths
         //else return 1;
-        
-    //else store that character 
+
+    //else store that character
     //print the stored number
-    
+
+
 
 }
 
