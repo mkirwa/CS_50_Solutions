@@ -53,11 +53,9 @@ int main(void){
         //if Y is a power of 2
             //convert it into some integral number of eighths
         //else return 1;
-        
 
     //else store that character
     //print the stored number
-
 
 
 }
