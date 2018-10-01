@@ -3,6 +3,7 @@
 #include "helpers.h"
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 
 
@@ -15,7 +16,7 @@ int main(void){
 
     string word = get_string("enter the word: ");
     int converted = duration(word);
-    printf("converted : %i\n",converted);
+    printf(converted);
 
 }
 
@@ -32,21 +33,21 @@ int duration(string fraction)
     //Input is a string  and it should be converted into some integral number of eights!
         //what exactly does the user type in?
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
+
+    //create a space for each character in the string
+    //store the characters in the spaces created
         int num = strlen(fraction);
-        char array[num+1];
-
-        int count = 0;
-
-        for(int i=0; i<num; i++){
-
-            array[count]=fraction[i];
-            count++;
+        if(num>3){
+            return 1;
         }
+        else{
 
-        array[count]='\0';
-
-        return array;
-
-
-
+                    if(fraction[2]%2!=0){
+                        return 1;
+                    }else{
+                        double result1= atof(&fraction[2]);
+                        result1 = trunc(log2(result1));
+                        return printf("%.0f%c%.0f\n",atof(&fraction[0])*result1,fraction[1],atof(&fraction[2])*result1);
+                        }
+            }
 }
