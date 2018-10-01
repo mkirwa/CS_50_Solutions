@@ -11,8 +11,6 @@
 //and return as an int a corresponding number of eigths
 //(2, in this case, since 1/4 is equivalent to 2/8)
 int duration(string fraction);
-char array[num+1];
-
 int main(void){
 
     string word = get_string("enter the word: ");
@@ -35,6 +33,7 @@ int duration(string fraction)
         //what exactly does the user type in?
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
         int num = strlen(fraction);
+        char array[num+1];
 
         int count = 0;
 
