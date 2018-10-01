@@ -5,7 +5,6 @@
 
 #include <stdlib.h>
 #include <string.h>
-
 #include <ctype.h>
 // Converts a fraction formatted as X/Y to eighths
 //takes as input string a fraction (e.g., 1/4)
