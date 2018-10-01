@@ -1,6 +1,5 @@
 #include <cs50.h>
 #include <stdio.h>
-
 #include "helpers.h"
 #include <stdlib.h>
 #include <string.h>
