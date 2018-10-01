@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <math.h>
+
 // Converts a fraction formatted as X/Y to eighths
 //takes as input string a fraction (e.g., 1/4)
 //and return as an int a corresponding number of eigths
@@ -24,31 +26,47 @@ int main(void){
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
 
 
-    string word = get_string("enter the word: ");
+        string word = get_string("enter the word: ");
 
     //create a space for each character in the string
     //store the characters in the spaces created
         int num = strlen(word);
-        char array[num+1];
-
-        int count = 0;
-
-        for(int i=0; i<num; i++){
-            array[count]=word[i];
-            count++;
+        if(num>3){
+            return 1;
         }
+        else{
 
-        array[count]='\0';
+                    if(word[2]%2!=0){
+                        return 1;
+                    }else{
 
-        printf("this is it: %s",array);
+                        double result1= atof(&word[2]);
+                        result1 = trunc(log2(result1));
 
-    //if that character is a number
-        //if Y is a power of 2
-            //convert it into some integral number of eighths
-        //else return 1;
+                        return printf("%.0f%c%.0f\n",atof(&word[0])*result1,word[1],atof(&word[2])*result1);
 
-    //else store that character
-    //print the stored number
+                    }
+                    //char array[num+1];
+
+                    //int count = 0;
+
+                    //for(int i= 0; i< num; i++){
+                        //array[count]=word[i];
+                        //count++;
+                    //}
+
+                    //array[count]='\0';
+
+
+                    //if that character is a number
+                    //if Y is a power of 2
+                        //convert it into some integral number of eighths
+                    //else return 1;
+
+                    //else store that character
+                    //print the stored number
+
+        }
 
 
 }
