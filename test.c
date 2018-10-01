@@ -1,9 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
-
 #include "helpers.h"
-
 #include <stdlib.h>
+#include <string.h>
+
 
 
 // Converts a fraction formatted as X/Y to eighths
@@ -11,11 +11,13 @@
 //and return as an int a corresponding number of eigths
 //(2, in this case, since 1/4 is equivalent to 2/8)
 int duration(string fraction);
+char array[num+1];
+
 int main(void){
 
     string word = get_string("enter the word: ");
-    duration(word);
-    printf("converted : %s\n",word);
+    int converted = duration(word);
+    printf("converted : %i\n",converted);
 
 }
 
@@ -32,8 +34,19 @@ int duration(string fraction)
     //Input is a string  and it should be converted into some integral number of eights!
         //what exactly does the user type in?
         //I need to know if atoi gets rid of the / if not, how do I get rid of the /
+        int num = strlen(fraction);
 
-    return(atoi(fraction));
+        int count = 0;
+
+        for(int i=0; i<num; i++){
+
+            array[count]=fraction[i];
+            count++;
+        }
+
+        array[count]='\0';
+
+        return array;
 
 
 
