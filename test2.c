@@ -3,7 +3,7 @@
 
 int main(void){
 
-	
+
 }
 
 
@@ -18,6 +18,5 @@ int frequency(string note)
     //away from its adjacent neighbor, whether white or black.
     //The effect of # and b, otherwise known as accidentals, is to raise or lower,
     //respectively, the pitch of a note by one semitone.
-
 
 }
