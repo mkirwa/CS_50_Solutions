@@ -1,6 +1,12 @@
 #include <stdio.h>
 
 
+int main(void){
+
+	
+}
+
+
 int frequency(string note)
 {
     // TODO
