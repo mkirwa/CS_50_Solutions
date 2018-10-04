@@ -57,7 +57,6 @@ int frequency(string note)
                         //where n is the number of semitones from that note to A4
                         
                         
-                        
                     //Y is any of 0 through 8, or Y is # or b
                     }else if((int)note[1]==35 ||(int)note[1]==98){
                         
