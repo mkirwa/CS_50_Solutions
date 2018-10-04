@@ -34,12 +34,33 @@ int frequency(string note)
             }
 
     }else if(num==3){
+
+            char array[3];
+
             if((int)note[0]>=65 && (int)(note[0])<=71){
-                return printf("it's working%i",note[0]);
+
+
+                char array[0]=note[0];
+
+
             }else if((int)note[1]==35 ||(int)note[1]==98){
-                return printf("it's working%i",note[0]);
-            }else if((int)note[1]>=0 && (int)note[1]<=8){
-                return printf("it's working%i",note[0]);
+
+
+                if((int)note[1]==35){
+                    char array[1]=note[1];
+                }else if((int)note[1]==98){
+                    char array[1]=note[1];
+                }else{
+                    return 1;
+                }
+
+
+
+            }else if((int)note[2]>=0 && (int)note[2]<=8){
+
+                char array[2]=note[2];
+                char array[3]='\0';
+
             }else{
                 return 1;
             }
