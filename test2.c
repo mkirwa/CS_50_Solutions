@@ -11,7 +11,7 @@ int main(void){
 
     string word = get_string("enter the word: ");
     int converted = frequency(word);
-    printf("HERE%i",converted);
+    printf("HERE%i\n",converted);
 
 }
 
@@ -24,7 +24,7 @@ int frequency(string note)
             if((int)note[0]>=65 && (int)(note[0])<=71){
                 int num1=atoi(&note[1]);
                 if(num1>=0 && num1<=8){
-                    return printf("it's working%i%i",note[0],num1);
+                    return printf("it's working: %c%i\n",note[0],num1);
                 }else{
                     return 1;
                 }
