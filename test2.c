@@ -52,7 +52,6 @@ int frequency(string note)
                     if((int)note[0]>=65 && (int)(note[0])<=71){
                         
                         //store note[0]
-                        
                         //Return as an int the note’s corresponding frequency,
                         //The frequency, f, of some note is 2n/12 × 440,
                         //where n is the number of semitones from that note to A4
