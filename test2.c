@@ -17,12 +17,15 @@ int main(void){
 
 int frequency(string note)
 {
-
+    //Getting the length of the string
     int num = strlen(note);
+    //if the input is A4 
     if(num==2){
-
+            //checking to make sure the letter is in between A and G 
             if((int)note[0]>=65 && (int)(note[0])<=71){
+                //converting the 2nd character to an integer string
                 int num1=atoi(&note[1]);
+                //making sure the 2nd string character is between 0 and 8
                 if(num1>=0 && num1<=8){
                     return printf("it's working: %c%i\n",note[0],num1);
                 }else{
@@ -32,7 +35,7 @@ int frequency(string note)
             }else{
                 return 1;
             }
-
+    //if the input has a 
     }else if(num==3){
 
             if((int)note[0]>=65 && (int)(note[0])<=71){
