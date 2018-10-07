@@ -6,7 +6,18 @@
 #include <math.h>
 
 
-int duration(string fraction);
+//create space for the 12 keys
+//calculate the frequency for the 12 keys
+//make this the 4th octave
+//if the user asks for the frequency
+//take the octave for that particular key
+//subtract that octave from the 4th octave
+//take the result and multiply it by 2 call this total
+//take total and multiply it by the frequency
+//corresponding to that key in the 4th octave
+
+
+int frequency(string note);
 int main(void){
 
     string word = get_string("enter the word: ");
@@ -17,10 +28,23 @@ int main(void){
 
 int frequency(string note)
 {
+  //create space for the 12 keys
+    char array[13];
+    int count = 0;
+    int count1=65;
 
-    //We need to find the frequency?
-    //What do we need for that?
-    //We need a base case to get started with
+    //store all the keys in the spaces created
+    for(int i = 0; i <= 11; i++){
+        array[count]=count1;
+        count++;
+        count1++;
+    }
+    array[count]='\0';
+    printf("result: %s\n",array);
+
+
+
+
 
     //Getting the length of the string
     int num = strlen(note);
