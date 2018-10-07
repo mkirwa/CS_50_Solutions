@@ -31,18 +31,35 @@ int main(void){
 
 int frequency(string note)
 {
-  //create space for the 12 keys
+  //create a space for 12 keys
     char array[13];
+    //stores the
     int count = 0;
+    //alphabetical count from A through G
     int count1=65;
+    //Derives the n variable.
+    int count2 = 1;
 
+    //creating the base case
     //store all the keys in the spaces created
     for(int i = 0; i <= 11; i++){
         array[count]=count1;
         count++;
         count1++;
+
+        if (count1==67){
+            count2++;
+        }else{
+            //takes care of count1 being 66 and 67
+            //assigns count66 to 6 and count 67 to 7
+        }
     }
     array[count]='\0';
+
+    //calculating the frequency
+
+
+
     printf("result: %s\n",array);
 
 
