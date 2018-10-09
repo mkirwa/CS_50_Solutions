@@ -45,6 +45,8 @@ int frequency(string note)
 
     int freq;
 
+    int diff;
+
     double frequency;
     double power;
     double difference;
@@ -64,12 +66,36 @@ int frequency(string note)
                                         if(num1>=0 && num1<=8){
 
 
-                                                    freq = pow(2,(num1-4));
+                                                freq = pow(2,(num1-4));
+
+                                                diff = (int)note[0] - count1;
+
+                                            for(int i = 0; i<=diff; i++){
+
+
+                                                            if (count1>72){
+
+                                                                    count1=count1-7;
+                                                                    difference = count-count2;
+                                                                    power = pow(2,(difference/12));
+                                                                    frequency = freq*(power*440);
+
+                                                                }else{
+                                                                difference = count-count2;
+                                                                power = pow(2,(difference/12));
+                                                                frequency = freq*(power*440);
+                                                                    //printf("I got here T!");
+                                                                //printf("The frequency of: %d is %f\n",count1,frequency);
+                                                               // }
+
+                                                                count++;
+                                                                count1++;
+                                                                }
+                                                }
 
 
 
-
-                                                do{
+                                                /*do{
                                                     //creating the base case
                                                     //store all the keys in the spaces created
                                                     //for(int i = 1; i <= 7; i++){
@@ -120,7 +146,7 @@ int frequency(string note)
                                                 }
 
                                             while((int)note[0]!=count1);
-                                            count1++;
+                                            count1++;*/
 
                                         return printf("The frequency of: %s is %f\n",note,frequency);
 
