@@ -33,7 +33,7 @@ int frequency(string note)
 {
 
 
-    char array[8];
+    //char array[8];
 
     //creates a space for 7 numbers
     //stores the
@@ -41,7 +41,7 @@ int frequency(string note)
     //alphabetical count from A through G
     int count1 = 67;
     //Derives the n variable.
-    int count2 = 6;
+    int count2 = 10;
 
     int freq;
 
@@ -89,6 +89,7 @@ int frequency(string note)
                                                         difference = count-count2;
                                                         power = pow(2,(difference/12));
                                                         frequency = freq*(power*440);
+                                                            printf("I got here T!");
                                                         //printf("The frequency of: %d is %f\n",count1,frequency);
                                                        // }
 
@@ -108,13 +109,22 @@ int frequency(string note)
                                                         //}
                                                     }
                                                     //array[count]='\0';
+
+
+                                                    if((int)note[0]!=count1){
+                                                            //printf("I got here!");
+                                                            count1++;
+                                                        }
+
+
                                                 }
 
                                             while((int)note[0]!=count1);
+                                            count1++;
 
-                                        return printf("The frequency of: %i is %f\n",count1,frequency);
+                                        return printf("The frequency of: %s is %f\n",note,frequency);
 
-                                        count1++;
+
 
 
 
