@@ -310,26 +310,57 @@ int frequency(string note)
 
 
                                     //checking to make sure the first letter is in between A and G
-                                    if((int)note[0]>=65 && (int)(note[0])<=71){
+                                if((int)note[0]>=65 && (int)(note[0])<=71){
 
-                                            //checking to make sure the second string character is either a base or a sharp
-                                            if((int)note[1]==35 ||(int)note[1]==98){
+                                        int convertednum = atoi(&note[2]);
 
-                                                    int convertednum = atoi(&note[2]);
-                                                    if(convertednum>=0 && convertednum<=8){
+                                            if(convertednum>=0 && convertednum<=8){
 
-                                                        return printf("here!%c%c%i",note[0],note[1],convertednum);
+                                                        if((int)note[1]==35 || (int)note[1]==98){
 
-                                                    }else{
-                                                        return 1;
-                                                    }
+                                                                    int num1=atoi(&note[2]);
+                                                                    freq = pow(2,(num1-4));
+                                                                    diff = (int)note[0] - count1;
 
 
+
+                                                                    if((int)note[0]==67){
+
+                                                                        diff=diff+1;
+                                                                        for(int i = 0; i<=diff; i++){
+                                                                                if (count1>72){
+                                                                                        count1=count1-7;
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                    }else{
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                        count++;
+                                                                                        count1++;
+                                                                                         }
+                                                                            }
+                                                                    return printf("The frequency of: %s is %f\n",note,frequency);
+
+
+                                                                    }else{
+                                                                        return 1;
+                                                                    }
+
+
+
+
+
+
+                                                       }else{
+
+                                                            return 1;
+
+                                                        }
                                             }else{
                                                 return 1;
                                             }
-
-
 
                                     }else{
                                         return 1;
