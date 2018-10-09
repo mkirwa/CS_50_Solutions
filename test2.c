@@ -341,10 +341,94 @@ int frequency(string note)
                                                                                         count1++;
                                                                                          }
                                                                             }
+                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+
+
+                                                                    }else if((int)note[0]==68){
+
+                                                                        diff=diff+2;
+                                                                        for(int i = 0; i<=diff; i++){
+                                                                                if (count1>72){
+                                                                                        count1=count1-7;
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                    }else{
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                        count++;
+                                                                                        count1++;
+                                                                                         }
+                                                                            }
+                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+
+                                                                    }else if((int)note[0]==70){
+
+                                                                        diff=diff+4;
+                                                                        for(int i = 0; i<=diff; i++){
+                                                                                if (count1>72){
+                                                                                        count1=count1-7;
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                    }else{
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                        count++;
+                                                                                        count1++;
+                                                                                         }
+                                                                            }
+                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+
+                                                                    }else if((int)note[0]==71){
+
+
+
+                                                                        diff=diff+5;
+                                                                        for(int i = 0; i<=diff; i++){
+                                                                                if (count1>72){
+                                                                                        count1=count1-7;
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                    }else{
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                        count++;
+                                                                                        count1++;
+                                                                                         }
+                                                                            }
+                                                                    return printf("The frequency of: %s is %f\n",note,frequency);
+
+                                                                    }else if((int)note[0]==65){
+
+
+
+                                                                        diff=diff+13;
+                                                                        for(int i = 0; i<=diff; i++){
+                                                                                if (count1>72){
+                                                                                        count1=count1-7;
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                    }else{
+                                                                                        difference = count-count2;
+                                                                                        power = pow(2,(difference/12));
+                                                                                        frequency = freq*(power*440);
+                                                                                        count++;
+                                                                                        count1++;
+                                                                                         }
+                                                                            }
                                                                     return printf("The frequency of: %s is %f\n",note,frequency);
 
 
-                                                                    }else{
+
+
+
+                                                                    }else {
                                                                         return 1;
                                                                     }
 
@@ -372,7 +456,8 @@ int frequency(string note)
 
 
 
-
+////Sublime won't let me use it for free
+                                    
 
 
 
