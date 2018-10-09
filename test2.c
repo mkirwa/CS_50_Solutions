@@ -70,28 +70,146 @@ int frequency(string note)
                             //to find the frequency for the particular key
                             diff = (int)note[0] - count1;
 
-                                            for(int i = 0; i<=diff; i++){
+                            if((int)note[0]==67){
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+                            }else if((int)note[0]==68){
+
+                                diff=diff+1;
+
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
 
 
-                                                            if (count1>72){
 
-                                                                    count1=count1-7;
-                                                                    difference = count-count2;
-                                                                    power = pow(2,(difference/12));
-                                                                    frequency = freq*(power*440);
+                            }else if((int)note[0]==69){
 
-                                                                }else{
-                                                                difference = count-count2;
-                                                                power = pow(2,(difference/12));
-                                                                frequency = freq*(power*440);
-                                                                    //printf("I got here T!");
-                                                                //printf("The frequency of: %d is %f\n",count1,frequency);
-                                                               // }
+                                diff=diff+2;
 
-                                                                count++;
-                                                                count1++;
-                                                                }
-                                                }
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+
+
+                            }else if((int)note[0]==70){
+
+                                diff=diff+2;
+
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+
+
+                            }else if((int)note[0]==71){
+
+                                diff=diff+4;
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+
+
+
+                            }else if((int)note[0]==65){
+
+
+                                diff=diff+12;
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+
+
+                            } else if((int)note[0]==66){
+
+
+                                diff=diff+13;
+                                for(int i = 0; i<=diff; i++){
+                                        if (count1>72){
+                                                count1=count1-7;
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                            }else{
+                                                difference = count-count2;
+                                                power = pow(2,(difference/12));
+                                                frequency = freq*(power*440);
+                                                count++;
+                                                count1++;
+                                                 }
+                                    }
+
+
+                            }else{
+                                return 1;
+                            }
+
 
 
 
