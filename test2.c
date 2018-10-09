@@ -50,9 +50,6 @@ int frequency(string note)
     double frequency;
     double power;
     double difference;
-
-
-
     //Getting the length of the string
     int num = strlen(note);
     //the input is does not have a flat or sharp
@@ -210,68 +207,7 @@ int frequency(string note)
                                 return 1;
                             }
 
-
-
-
-                                                /*do{
-                                                    //creating the base case
-                                                    //store all the keys in the spaces created
-                                                    //for(int i = 1; i <= 7; i++){
-
-                                                        //array[count]=count1;
-
-                                                        ///STOPPED HERE IDIOT. IT'S NOT 7 BUT 12!
-
-                                                        if (count1>72){
-
-                                                            count1=count1-7;
-                                                            difference = count-count2;
-                                                            power = pow(2,(difference/12));
-                                                            frequency = freq*(power*440);
-
-                                                        }else{
-                                                        difference = count-count2;
-                                                        power = pow(2,(difference/12));
-                                                        frequency = freq*(power*440);
-                                                            printf("I got here T!");
-                                                        //printf("The frequency of: %d is %f\n",count1,frequency);
-                                                       // }
-
-                                                        count++;
-
-
-
-                                                       // printf("result: %s\n",array);
-
-                                                        //if (count1==67){
-                                                            //count2++;
-                                                        //}else{
-                                                            //takes care of count1 being 66 and 67
-                                                            //assigns count1 66 to 6 and count 67 to 7
-
-
-                                                        //}
-                                                    }
-                                                    //array[count]='\0';
-
-
-                                                    if((int)note[0]!=count1){
-                                                            //printf("I got here!");
-                                                            count1++;
-                                                        }
-
-
-                                                }
-
-                                            while((int)note[0]!=count1);
-                                            count1++;*/
-
                                         return printf("The frequency of: %s is %f\n",note,frequency);
-
-
-
-
-
 
                                         }else{
                                             return 1;
@@ -280,35 +216,8 @@ int frequency(string note)
                                     }else{
                                         return 1;
                                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //the input has a sharp or flat
+   //the input has a sharp or flat
     }else if(num==3){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                     //checking to make sure the first letter is in between A and G
                                 if((int)note[0]>=65 && (int)(note[0])<=71){
 
@@ -404,9 +313,6 @@ int frequency(string note)
                                                                     return printf("The frequency of: %s is %f\n",note,frequency);
 
                                                                     }else if((int)note[0]==65){
-
-
-
                                                                         diff=diff+13;
                                                                         for(int i = 0; i<=diff; i++){
                                                                                 if (count1>72){
@@ -424,18 +330,9 @@ int frequency(string note)
                                                                             }
                                                                     return printf("The frequency of: %s is %f\n",note,frequency);
 
-
-
-
-
                                                                     }else {
                                                                         return 1;
                                                                     }
-
-
-
-
-
 
                                                        }else{
 
@@ -449,23 +346,6 @@ int frequency(string note)
                                     }else{
                                         return 1;
                                     }
-
-
-
-
-
-
-
-////Sublime won't let me use it for free
-                                    
-
-
-
-
-
-
-
-
 
     }else{
         return 1;
