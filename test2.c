@@ -58,17 +58,17 @@ int frequency(string note)
     //the input is does not have a flat or sharp
     if(num==2){
 
-                                    //checking to make sure the first letter is in between A and G
-                                    if((int)note[0]>=65 && (int)(note[0])<=71){
-                                        //converting the 2nd string character to an integer string
-                                        int num1=atoi(&note[1]);
-                                        //making sure the 2nd string character is between 0 and 8
-                                        if(num1>=0 && num1<=8){
-
-
-                                                freq = pow(2,(num1-4));
-
-                                                diff = (int)note[0] - count1;
+                    //checking to make sure the first letter is in between A and G
+                    if((int)note[0]>=65 && (int)(note[0])<=71){
+                            //converting the 2nd string character to an integer string
+                            int num1=atoi(&note[1]);
+                            //making sure the 2nd string character is between 0 and 8
+                            if(num1>=0 && num1<=8){
+                            //calculates the difference between octaves
+                            freq = pow(2,(num1-4));
+                            //diff will be used to determine the number of repetitions taken
+                            //to find the frequency for the particular key
+                            diff = (int)note[0] - count1;
 
                                             for(int i = 0; i<=diff; i++){
 
