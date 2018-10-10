@@ -43,7 +43,11 @@ int frequency(string note)
     //Derives the n variable.
     int count2 = 10;
 
-    int freq;
+    double freq;
+
+    double debug;
+    double debug2;
+    double debug3;
 
     int diff;
 
@@ -62,25 +66,44 @@ int frequency(string note)
                             //making sure the 2nd string character is between 0 and 8
                             if(num1>=0 && num1<=8){
                             //calculates the difference between octaves
-                            freq = pow(2,(num1-4));
+
+                            debug = (double)num1 - 4.0;
+
+
+
+
+
+
+                            //change happend here!
+                            if(debug<0){
+
+                                debug = debug*-1.0;
+                                freq = 1.0/pow(2.0,debug);
+
+                            }else{
+
+                                freq = pow(2,debug);
+                            }
+
+
+
+
+
                             //diff will be used to determine the number of repetitions taken
                             //to find the frequency for the particular key
                             diff = (int)note[0] - count1;
 
                             if((int)note[0]==67){
                                 for(int i = 0; i<=diff; i++){
-                                        if (count1>72){
-                                                count1=count1-7;
+
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
-                                                frequency = freq*(power*440);
-                                            }else{
-                                                difference = count-count2;
-                                                power = pow(2,(difference/12));
-                                                frequency = freq*(power*440);
+                                                debug2 = power*440;
+                                                debug3 = freq + 1.0;
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
-                                                 }
+
                                     }
                             }else if((int)note[0]==68){
 
@@ -92,10 +115,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -113,10 +138,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -133,10 +160,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -152,10 +181,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -173,10 +204,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -193,10 +226,12 @@ int frequency(string note)
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                             }else{
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
                                                 frequency = freq*(power*440);
+                                                frequency=round(frequency);
                                                 count++;
                                                 count1++;
                                                  }
@@ -207,7 +242,7 @@ int frequency(string note)
                                 return 1;
                             }
 
-                                        return printf("The frequency of: %s is %f\n",note,frequency);
+                                        return printf("%i",(int)frequency);
 
                                         }else{
                                             return 1;
@@ -242,15 +277,17 @@ int frequency(string note)
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                     }else{
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                         count++;
                                                                                         count1++;
                                                                                          }
                                                                             }
-                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+                                                                        return printf("%i",(int)frequency);
 
 
                                                                     }else if((int)note[0]==68){
@@ -262,15 +299,17 @@ int frequency(string note)
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                     }else{
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                         count++;
                                                                                         count1++;
                                                                                          }
                                                                             }
-                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+                                                                        return printf("%i",(int)frequency);
 
                                                                     }else if((int)note[0]==70){
 
@@ -281,15 +320,17 @@ int frequency(string note)
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                     }else{
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                         count++;
                                                                                         count1++;
                                                                                          }
                                                                             }
-                                                                        return printf("The frequency of: %s is %f\n",note,frequency);
+                                                                        return printf("%i",(int)frequency);
 
                                                                     }else if((int)note[0]==71){
 
@@ -302,15 +343,17 @@ int frequency(string note)
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                     }else{
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                         count++;
                                                                                         count1++;
                                                                                          }
                                                                             }
-                                                                    return printf("The frequency of: %s is %f\n",note,frequency);
+                                                                    return printf("%i",(int)frequency);
 
                                                                     }else if((int)note[0]==65){
                                                                         diff=diff+13;
@@ -320,15 +363,17 @@ int frequency(string note)
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
                                                                                         frequency = freq*(power*440);
+                                                                                        frequency=round(frequency);
                                                                                     }else{
                                                                                         difference = count-count2;
                                                                                         power = pow(2,(difference/12));
-                                                                                        frequency = freq*(power*440);
+                                                                                        frequency = freq *(power*440);
+                                                                                        frequency=round(frequency);
                                                                                         count++;
                                                                                         count1++;
                                                                                          }
                                                                             }
-                                                                    return printf("The frequency of: %s is %f\n",note,frequency);
+                                                                    return printf("%i",(int)frequency);
 
                                                                     }else {
                                                                         return 1;
