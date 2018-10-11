@@ -98,8 +98,8 @@ int frequency(string note)
 
                                                 difference = count-count2;
                                                 power = pow(2,(difference/12));
-                                                debug2 = power*440;
-                                                debug3 = freq + 1.0;
+                                                debug2 = power*440.000;
+                                                debug3 = freq*debug2;
                                                 frequency=round(frequency);
                                                 count++;
                                                 count1++;
