@@ -5,7 +5,6 @@
 #include <string.h>
 #include <math.h>
 
-
 //create space for the 12 keys
 //calculate the frequency for the 12 keys
     //compare the frequency with A frequency which is 440
