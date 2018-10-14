@@ -32,7 +32,6 @@ int main(void){
 int frequency(string note)
 {
 
-
     if(strlen(note[0])=2 && num<=3){
             
             const char array = {'A','A','B','C','C','D','D','E','F','F','G','G'};
