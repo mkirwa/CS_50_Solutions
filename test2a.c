@@ -34,8 +34,8 @@ int frequency(string note)
     if(strlen(note[0])=2 && num<=3){
 
         //loop through the length of the array until the input is equivalent to
-        //one of the characters in the array  
-        //use a do while loop. While the position of that element in the array is not equal to   
+        //one of the characters in the array
+        //use a do while loop. While the position of that element in the array is not equal to
             const char array[] = {'C','C','D','D','E','F','G','G','A','A','B','B'};
 
             int count=0;
@@ -44,30 +44,31 @@ int frequency(string note)
                  count++;
 
             }while((int)note[0]==(int)array[count]);
-            
-            //if it's a base 
+
+            //if it's a base or a shape then do this
             if((int)note[1]==98 || (int)note[1]==35){
                 count++;
             }
-            
+            int difference = count - 9;
+            diff = (int)note[0] - count1;
+
+
             for(int i = 0; i<=diff; i++){
-                
-                
-                    difference = count-count2;
-                    power = pow(2,(difference/12));
-                    debug2 = power*440.000;
-                    debug3 = freq*debug2;
-                    frequency=round(frequency);
+
+                    int power = pow(2,(difference/12));
+                    int debug2 = power*440.000;
+                    int debug3 = freq*debug2;
+                    int frequency1=round(frequency1);
                     count++;
                     count1++;
-                    
+
                 }
-            
-            
+
+
         }else{
             return 1;
         }
-        
+
     }else{
         return 1;
     }
