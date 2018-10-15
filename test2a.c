@@ -38,11 +38,12 @@ int frequency(string note)
         //use a do while loop. While the position of that element in the array is not equal to   
             const char array[] = {'A','A','B','C','C','D','D','E','F','F','G','G'};
 
-            int count;
+            int count=0;
 
             do{
+                 count++;
 
-            }while(note[0]==array[count]);
+            }while((int)note[0]==(int)array[count]);
             
             for(int i = 0; i<=diff; i++){
                 
