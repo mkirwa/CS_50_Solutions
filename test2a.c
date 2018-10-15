@@ -36,7 +36,7 @@ int frequency(string note)
         //loop through the length of the array until the input is equivalent to
         //one of the characters in the array  
         //use a do while loop. While the position of that element in the array is not equal to   
-            const char array[] = {'A','A','B','C','C','D','D','E','F','F','G','G'};
+            const char array[] = {'C','C','D','D','E','F','G','G','A','A','B','B'};
 
             int count=0;
 
@@ -44,6 +44,11 @@ int frequency(string note)
                  count++;
 
             }while((int)note[0]==(int)array[count]);
+            
+            //if it's a base 
+            if((int)note[1]==98 || (int)note[1]==35){
+                count++;
+            }
             
             for(int i = 0; i<=diff; i++){
                 
