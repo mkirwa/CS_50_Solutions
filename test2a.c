@@ -34,8 +34,15 @@ int frequency(string note)
     if(strlen(note[0])=2 && num<=3){
 
         //loop through the length of the array until the input is equivalent to
-        //one of the characters in the array    
+        //one of the characters in the array  
+        //use a do while loop. While the position of that element in the array is not equal to   
             const char array[] = {'A','A','B','C','C','D','D','E','F','F','G','G'};
+
+            int count;
+
+            do{
+
+            }while(note[0]==array[count]);
             
             for(int i = 0; i<=diff; i++){
                 
