@@ -53,18 +53,21 @@ int frequency(string note)
 
             int diff;
 
+            int num1=atoi(&note[1]);
+
 
             if(strlen(note[0])==2){
-                int num1=atoi(&note[1]);
                 diff = num1 - 8;
             }else{
-                int num1=atoi(&note[2]);
+                num1=atoi(&note[2]);
                 diff = num1 - 8;
             }
 
             double debug = (double)num1 - 4.0;
 
             //change happend here!
+            double freq;
+
             if(debug<0){
                     debug = debug*-1.0;
                     freq = 1.0/pow(2.0,debug);
