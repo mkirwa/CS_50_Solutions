@@ -50,10 +50,10 @@ int frequency(string note)
                 count++;
             }
             int difference = count - 9;
-            
+
             int diff;
-            
-            
+
+
             if(strlen(note[0])==2){
                 int num1=atoi(&note[1]);
                 diff = num1 - 8;
@@ -61,9 +61,9 @@ int frequency(string note)
                 int num1=atoi(&note[2]);
                 diff = num1 - 8;
             }
-            
-            int debug = (double)num1 - 4.0;
-            
+
+            double debug = (double)num1 - 4.0;
+
             //change happend here!
             if(debug<0){
                     debug = debug*-1.0;
@@ -76,7 +76,7 @@ int frequency(string note)
 
 
 
-            
+
             double freq;
 
 
@@ -87,8 +87,8 @@ int frequency(string note)
                     int debug2 = power*440.000;
                     int debug3 = freq*debug2;
                     int frequency1=round(frequency1);
-                    count++;
-                    count1++;
+                    //count++;
+                    //count1++;
 
                 }
 
