@@ -31,7 +31,7 @@ int main(void){
 
 int frequency(string note)
 {
-    if(strlen(note[0])=2 && num<=3){
+    if(strlen(note)===2 || strlen(note)==3){
 
         //loop through the length of the array until the input is equivalent to
         //one of the characters in the array
@@ -56,7 +56,7 @@ int frequency(string note)
             int num1=atoi(&note[1]);
 
 
-            if(strlen(note[0])==2){
+            if(strlen(note)==2){
                 diff = num1 - 8;
             }else{
                 num1=atoi(&note[2]);
@@ -66,22 +66,15 @@ int frequency(string note)
             double debug = (double)num1 - 4.0;
 
             //change happend here!
-            double freq;
 
             if(debug<0){
                     debug = debug*-1.0;
-                    freq = 1.0/pow(2.0,debug);
+                   double freq = 1.0/pow(2.0,debug);
 
             }else{
 
-                    freq = pow(2,debug);
+                    double freq = pow(2,debug);
             }
-
-
-
-
-            double freq;
-
 
 
             for(int i = 0; i<=diff; i++){
