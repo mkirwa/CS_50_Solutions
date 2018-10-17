@@ -4,22 +4,6 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-
-
-//create space for the 12 keys
-//calculate the frequency for the 12 keys
-    //compare the frequency with A frequency which is 440
-    //find n the the number of semitones from that note to A4
-    //use the formula 2 power(2/12) * 440
-//make this the 4th octave
-    //check the
-//if the user asks for the frequency
-//take the octave for that particular key
-//subtract that octave from the 4th octave
-//take the result and multiply it by 2 call this total
-//take total and multiply it by the frequency
-//corresponding to that key in the 4th octave
-
 int frequency(string note);
 int main(void){
 
