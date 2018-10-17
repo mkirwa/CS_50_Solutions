@@ -6,34 +6,22 @@
 #include <math.h>
 int frequency(string note);
 int main(void){
-
     string word = get_string("enter the word: ");
     int converted = frequency(word);
     printf("HERE%i\n",converted);
-
 }
-
 int frequency(string note)
 {
     if(strlen(note)==2 || strlen(note)==3){
-
-        //loop through the length of the array until the input is equivalent to
-        //one of the characters in the array
-        //use a do while loop. While the position of that element in the array is not equal to
             const char array[] = {'C','C','D','D','E','F','G','G','A','A','B','B'};
-
             int count=0;
-
             for(int i=0; i<=count; i++){
-
                 if((int)note[0]!=(int)array[count]){
                     count++;
                 }else{
                     break;
                 }
             }
-
-
             int num1=0;
             //if it's a base or a shape then do this
             if((int)note[1]==98 || (int)note[1]==35){
@@ -42,7 +30,6 @@ int frequency(string note)
             }else{
                 num1=atoi(&note[1]);
             }
-
             double difference = count - 8;
             double difference1 = num1 - 4.0;
             double freq;
@@ -50,21 +37,13 @@ int frequency(string note)
             double power;
             double debug2;
             double debug3;
-
-            //change happend here!
-
             if(difference1<0){
                     difference1 = difference1*(-1.0);
                     freq = 1.0/pow(2.0,difference1);
-
             }else{
-
                     freq = pow(2,difference1);
             }
-
-
             for(int i = 0; i<=count; i++){
-
                     power = pow(2.0,(difference/12.0));
                     debug2 = power*440.000;
                     debug3 =  freq*debug2;
