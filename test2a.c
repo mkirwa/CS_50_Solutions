@@ -48,11 +48,8 @@ int frequency(string note)
                     debug2 = power*440.000;
                     debug3 =  freq*debug2;
                     frequency1=round(debug3);
-
                 }
-
         return printf("%f\n",frequency1);
-
 
         }else{
             return 1;
