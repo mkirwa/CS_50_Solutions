@@ -31,7 +31,7 @@ int main(void){
 
 int frequency(string note)
 {
-    if(strlen(note)===2 || strlen(note)==3){
+    if(strlen(note)==2 || strlen(note)==3){
 
         //loop through the length of the array until the input is equivalent to
         //one of the characters in the array
@@ -40,64 +40,60 @@ int frequency(string note)
 
             int count=0;
 
-            do{
-                 count++;
+            for(int i=0; i<=count; i++){
 
-            }while((int)note[0]==(int)array[count]);
+                if((int)note[0]!=(int)array[count]){
+                    count++;
+                }else{
+                    break;
+                }
+            }
 
+
+            int num1=0;
             //if it's a base or a shape then do this
             if((int)note[1]==98 || (int)note[1]==35){
-                count++;
-            }
-            int difference = count - 9;
-
-            int diff;
-
-            int num1=atoi(&note[1]);
-
-
-            if(strlen(note)==2){
-                diff = num1 - 8;
+                 count++;
+                 num1 = atoi(&note[2]);
             }else{
-                num1=atoi(&note[2]);
-                diff = num1 - 8;
+                num1=atoi(&note[1]);
             }
 
-            double debug = (double)num1 - 4.0;
+            double difference = count - 8;
+            double difference1 = num1 - 4.0;
+            double freq;
+            double frequency1;
+            double power;
+            double debug2;
+            double debug3;
 
             //change happend here!
 
-            if(debug<0){
-                    debug = debug*-1.0;
-                   double freq = 1.0/pow(2.0,debug);
+            if(difference1<0){
+                    difference1 = difference1*(-1.0);
+                    freq = 1.0/pow(2.0,difference1);
 
             }else{
 
-                    double freq = pow(2,debug);
+                    freq = pow(2,difference1);
             }
 
 
-            for(int i = 0; i<=diff; i++){
+            for(int i = 0; i<=count; i++){
 
-                    int power = pow(2,(difference/12));
-                    int debug2 = power*440.000;
-                    int debug3 = freq*debug2;
-                    int frequency1=round(frequency1);
-                    //count++;
-                    //count1++;
+                    power = pow(2.0,(difference/12.0));
+                    debug2 = power*440.000;
+                    debug3 =  freq*debug2;
+                    frequency1=round(debug3);
 
                 }
+
+        return printf("%f\n",frequency1);
 
 
         }else{
             return 1;
         }
-
-    }else{
-        return 1;
-    }
-
-
 
 }
 
