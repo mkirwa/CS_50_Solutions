@@ -23,7 +23,6 @@ int frequency(string note)
                 }
             }
             int num1=0;
-            //if it's a base or a shape then do this
             if((int)note[1]==98 || (int)note[1]==35){
                  count++;
                  num1 = atoi(&note[2]);
