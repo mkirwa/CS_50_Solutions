@@ -8,12 +8,12 @@ int frequency(string note);
 int main(void){
     string word = get_string("enter the word: ");
     int converted = frequency(word);
-    printf("HERE%i\n",converted);
+    printf("%i\n",converted);
 }
 int frequency(string note)
 {
     if(strlen(note)==2 || strlen(note)==3){
-            const char array[] = {'C','C','D','D','E','F','G','G','A','A','B','B'};
+            const char array[] = {'C','C','D','D','E','F','F','G','G','A','A','B'};
             int count=0;
             for(int i=0; i<=count; i++){
                 if((int)note[0]!=(int)array[count]){
@@ -29,7 +29,7 @@ int frequency(string note)
             }else{
                 num1=atoi(&note[1]);
             }
-            double difference = count - 8;
+            double difference = count - 9;
             double difference1 = num1 - 4.0;
             double freq;
             double frequency1;
@@ -48,8 +48,7 @@ int frequency(string note)
                     debug3 =  freq*debug2;
                     frequency1=round(debug3);
                 }
-        return printf("%f\n",frequency1);
-
+        return (int)frequency1;
         }else{
             return 1;
         }
