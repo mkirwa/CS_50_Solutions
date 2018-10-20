@@ -60,7 +60,6 @@ int frequency(string note)
         }
 
 }
-
 // Determines whether a string represents a rest
 bool is_rest(string s)
 {
