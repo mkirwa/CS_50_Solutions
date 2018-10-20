@@ -5,7 +5,6 @@
 #include <math.h>
 #include <string.h>
 #include "helpers.h"
-
 // Converts a fraction formatted as X/Y to eighths
 int duration(string fraction)
 {
