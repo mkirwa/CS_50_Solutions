@@ -13,7 +13,6 @@ int duration(string fraction)
     int y = fraction[2] - '0';
     // Calculate the number of eighths
     return (8/y) * x;
-
 }
 // Calculates frequency (in Hz) of a note
 // Calculates frequency (in Hz) of a note
