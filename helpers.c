@@ -11,7 +11,6 @@ int duration(string fraction)
     // Get the integer value of numerator and denominator
     int x = fraction[0] - '0';
     int y = fraction[2] - '0';
-
     // Calculate the number of eighths
     return (8/y) * x;
 
