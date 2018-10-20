@@ -1,5 +1,4 @@
 // Helper functions for music
-
 #include <cs50.h>
 #include <ctype.h>
 #include <math.h>
