@@ -13,11 +13,9 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Usage: copy infile outfile\n");
         return 1;
     }
-
     // remember filenames
     char *infile = argv[1];
     char *outfile = argv[2];
-
     // open input file
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
@@ -25,7 +23,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Could not open %s.\n", infile);
         return 2;
     }
-
     // open output file
     FILE *outptr = fopen(outfile, "w");
     if (outptr == NULL)
