@@ -109,10 +109,7 @@ int main(int argc, char *argv[])
         }
     }
 
-
-
-
-        fclose(inptr);
+         fclose(inptr);
         fclose(outptr);
 
     // success
