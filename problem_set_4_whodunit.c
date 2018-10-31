@@ -1,35 +1,60 @@
-// Copies a BMP file
-
+//Your program should accept exactly two command-line arguments: 
+//the name of an input file to open for reading followed by the
+//name of an output file to open for writing.
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "bmp.h"
 
 int main(int argc, char *argv[])
 {
     // ensure proper usage
-    if (argc != 3)
+    //If your program is executed with fewer or more than two command-line arguments
+    //it should remind the user of correct usage, as with fprintf (to stderr), 
+    //and main should return 1.
+    if (argc != 2)
     {
         fprintf(stderr, "Usage: copy infile outfile\n");
         return 1;
     }
+
     // remember filenames
-    char *infile = argv[1];
-    char *outfile = argv[2];
+    char *infile = argv[0];
+    char *outfile = argv[1];
+
     // open input file
+    //If the input file cannot be opened for reading, 
+    //your program should inform the user as much, 
+    //as with fprintf (to stderr), and main should return 2.
+    
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
         fprintf(stderr, "Could not open %s.\n", infile);
         return 2;
     }
+
     // open output file
+    //If the output file cannot be opened for writing, 
+    //your program should inform the user as much, 
+    //as with fprintf (to stderr), and main should return 3
+    
     FILE *outptr = fopen(outfile, "w");
     if (outptr == NULL)
     {
-        fclose(inptr);
         fprintf(stderr, "Could not create %s.\n", outfile);
         return 3;
     }
+    
+    
+    //If the input file is not a 24-bit uncompressed BMP 4.0, 
+    //your program should inform the user as much, 
+    //as with fprintf (to stderr), and main should return 4.
+
+
+    
+    
+    
 
     // read infile's BITMAPFILEHEADER
     BITMAPFILEHEADER bf;
