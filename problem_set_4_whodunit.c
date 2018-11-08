@@ -92,8 +92,6 @@ int main(int argc, char *argv[])
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
 
-            //Does my code go here???
-
             if(triple.rgbtRed==0xff){
                 triple.rgbtRed=0x00;
             }
