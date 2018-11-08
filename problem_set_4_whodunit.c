@@ -90,12 +90,13 @@ int main(int argc, char *argv[])
 
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
-            
-            //change all red pure pixels to white
+
+            //change all pure red pixels to white
             if(triple.rgbtRed==0xff){
                 triple.rgbtRed=0x00;
             }
 
+            //change all pure Green pixels to white 
             if(triple.rgbtGreen==0xff){
                 triple.rgbtGreen=0x00;
             }
