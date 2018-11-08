@@ -47,11 +47,9 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-
     //If the input file is not a 24-bit uncompressed BMP 4.0,
     //your program should inform the user as much,
     //as with fprintf (to stderr), and main should return 4.
-
 
     // read infile's BITMAPFILEHEADER
     BITMAPFILEHEADER bf;
@@ -70,8 +68,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Unsupported file format.\n");
         return 4;
     }
-
-
 
 
       // write outfile's BITMAPFILEHEADER
@@ -95,6 +91,22 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
+
+            //Does my code go here???
+            //changing the colors as necessary and writing them in
+
+            if(triple.rgbtRed==0xff){
+                triple.rgbtRed=0x00;
+            }
+
+            if(triple.rgbtGreen==0xff){
+                triple.rgbtGreen=0x00;
+            }
+
+            if(triple.rgbtBlue==0xff){
+                triple.rgbtBlue=0x00;
+            }
+
             // write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
         }
@@ -109,7 +121,7 @@ int main(int argc, char *argv[])
         }
     }
 
-         fclose(inptr);
+        fclose(inptr);
         fclose(outptr);
 
     // success
