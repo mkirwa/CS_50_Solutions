@@ -90,8 +90,8 @@ int main(int argc, char *argv[])
 
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
-
-
+            
+            //change all red pure pixels to white
             if(triple.rgbtRed==0xff){
                 triple.rgbtRed=0x00;
             }
