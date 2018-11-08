@@ -93,7 +93,6 @@ int main(int argc, char *argv[])
 
 
             //Does my code go here???
-            //changing the colors as necessary and writing them in
 
             if(triple.rgbtRed==0xff){
                 triple.rgbtRed=0x00;
