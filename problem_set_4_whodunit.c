@@ -101,6 +101,7 @@ int main(int argc, char *argv[])
                 triple.rgbtGreen=0x00;
             }
 
+            //change all pure Blue pixels to white
             if(triple.rgbtBlue==0xff){
                 triple.rgbtBlue=0x00;
             }
