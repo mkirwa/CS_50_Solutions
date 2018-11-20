@@ -70,6 +70,11 @@ int main(int argc, char *argv[])
         {
             // temporary storage
             RGBTRIPLE triple;
+            
+            
+            //Resize Horizontally
+            //Remember Padding!!!
+            
 
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
