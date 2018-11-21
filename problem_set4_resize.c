@@ -53,6 +53,9 @@ int main(int argc, char *argv[])
         return 4;
     }
 
+//really don't know if this is the place I want to change my code at
+//here!!!
+
     // write outfile's BITMAPFILEHEADER
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
