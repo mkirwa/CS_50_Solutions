@@ -86,6 +86,8 @@ int main(int argc, char *argv[])
 
             // write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE)*n, 1, outptr);
+            //try to see if you can implement resize by simply stretching n 
+            //horizontally first then you can move on to resizing vertically
         }
 
         // skip over padding, if any
