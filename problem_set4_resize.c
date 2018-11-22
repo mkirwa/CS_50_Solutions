@@ -79,7 +79,6 @@ int main(int argc, char *argv[])
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
 
-
             //Resize Horizontally
             //Remember Padding!!!
 
