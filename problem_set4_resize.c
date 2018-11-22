@@ -86,7 +86,6 @@ int main(int argc, char *argv[])
             //try to see if you can implement resize by simply stretching n 
             //horizontally first then you can move on to resizing vertically
         }
-
         // skip over padding, if any
         fseek(inptr, padding, SEEK_CUR);
 
