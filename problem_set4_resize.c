@@ -31,7 +31,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Could not create %s.\n", outfile);
         return 3;
     }
-
     // read infile's BITMAPFILEHEADER
     BITMAPFILEHEADER bf;
     fread(&bf, sizeof(BITMAPFILEHEADER), 1, inptr);
