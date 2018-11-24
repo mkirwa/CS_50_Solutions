@@ -62,7 +62,9 @@ int main(int argc, char *argv[])
 
     // iterate over infile's scanlines
     for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
-    {
+    {   
+        /////Every pixel is repeated n times
+
         // iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
         {
@@ -71,9 +73,9 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-            //Resize Horizontally
-            //Remember Padding!!!
-            //Every pixel is repeated n times
+            ///Resize Horizontally
+            ///Remember Padding!!!
+            
 
 
             // write RGB triple to outfile
