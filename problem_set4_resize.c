@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // iterate over infile's scanlines
+    ///every row is rotated n times 
     for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
     {   
         /////Every pixel is repeated n times
