@@ -84,7 +84,6 @@ int main(int argc, char *argv[])
             ///Re-copy method
                 ///go back to start of the original scanline
                 ///re-scan scanline
-            
 
             // write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE)*n, 1, outptr);
