@@ -7,7 +7,8 @@ int main(int argc, char *argv[])
 //take the value from the user say n
 //increase the size by value n
 //will size n be represented by argument 0?
-//should we take 4 arguments instead?
+//should we take 4 arguments instead or 3 arguments?
+//if we are taking 4 arguments, 
     // ensure proper usage
     if (argc != 3)
     {
