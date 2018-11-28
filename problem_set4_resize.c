@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[])
 {
+//take the value from the user say n
     // ensure proper usage
     if (argc != 3)
     {
@@ -15,7 +16,7 @@ int main(int argc, char *argv[])
     char *infile = argv[1];
     char *outfile = argv[2];
 
-    // open input file
+    // open input  
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
@@ -100,7 +101,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    
+
     // close infile
     fclose(inptr);
 
