@@ -6,6 +6,7 @@ int main(int argc, char *argv[])
 {
 //take the value from the user say n
 //increase the size by value n
+
     // ensure proper usage
     if (argc != 3)
     {
