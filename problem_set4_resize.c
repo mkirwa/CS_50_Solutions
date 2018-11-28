@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[])
 {
+//create an outfile that scales that bitmap by n 
 //take the value from the user say n
 //increase the size by value n
 //will size n be represented by argument 0?
@@ -57,12 +58,19 @@ int main(int argc, char *argv[])
 //really don't know if this is the place I want to change my code at
 //here!!!
     // write outfile's BITMAPFILEHEADER
+//with a resized bitmap, we will have an updated header!
+//what's changing in the header?
+//the file size is changing,
+//image size is changing,
+//image size and the width and height of the file 
+//the file size is mentioned here 
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
     // write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
     // determine padding for scanlines
+//this is where 
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // iterate over infile's scanlines
