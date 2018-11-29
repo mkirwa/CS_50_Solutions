@@ -4,6 +4,7 @@
 
 int main(int argc, char *argv[])
 {
+//Your program should accept exactly 3 command lines!!
 //create an outfile that scales that bitmap by n 
 //take the value from the user say n
 //increase the size by value n
@@ -18,8 +19,13 @@ int main(int argc, char *argv[])
     }
 
     // remember filenames
+    int n = argv[0];
     char *infile = argv[1];
     char *outfile = argv[2];
+
+    if(n<0 || n>100){
+        fprintf(stderr, n);
+    }
 
     // open input  
     FILE *inptr = fopen(infile, "r");
@@ -62,15 +68,16 @@ int main(int argc, char *argv[])
 //what's changing in the header?
 //the file size is changing,
 //image size is changing,
-//image size and the width and height of the file 
-//the file size is mentioned here 
+//image size and the width and height of the file
+
+//the file size of the bitmapfileheader is mentioned here
     fwrite(&bf, sizeof(BITMAPFILEHEADER), 1, outptr);
 
     // write outfile's BITMAPINFOHEADER
+//the size of of the bitmapinfoheader is mentioned here
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
     // determine padding for scanlines
-//this is where 
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // iterate over infile's scanlines
