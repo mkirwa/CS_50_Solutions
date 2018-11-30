@@ -123,7 +123,6 @@ int main(int argc, char *argv[])
         }
     }
 
-
     // close infile
     fclose(inptr);
 
