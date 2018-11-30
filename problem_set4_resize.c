@@ -22,7 +22,6 @@ int main(int argc, char *argv[])
     if(n<0 || n>100){
         fprintf(stderr, n);
     }
-
     // open input
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
