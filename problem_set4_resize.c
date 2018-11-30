@@ -41,6 +41,12 @@ int main(int argc, char *argv[])
         return 3;
     }
     // read infile's BITMAPFILEHEADER
+//Contents of BITMAPFIEHEADER. 
+// WORD bfType;
+// DWORD bfSize;
+// WORD bfReserved1;
+// WORD bfReserved2;
+// DWORD bfOffBits;
     BITMAPFILEHEADER bf;
     fread(&bf, sizeof(BITMAPFILEHEADER), 1, inptr);
 
