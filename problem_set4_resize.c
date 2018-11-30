@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Usage: copy infile outfile\n");
         return 1;
     }
-
     // remember filenames
     int n = argv[0];
     char *infile = argv[1];
