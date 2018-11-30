@@ -5,12 +5,9 @@
 int main(int argc, char *argv[])
 {
 //Your program should accept exactly 3 command lines!!
-//create an outfile that scales that bitmap by n 
+//create an outfile that scales that bitmap by n
 //take the value from the user say n
 //increase the size by value n
-//will size n be represented by argument 0?
-//should we take 4 arguments instead or 3 arguments?
-//if we are taking 4 arguments, 
     // ensure proper usage
     if (argc != 3)
     {
@@ -27,7 +24,7 @@ int main(int argc, char *argv[])
         fprintf(stderr, n);
     }
 
-    // open input  
+    // open input
     FILE *inptr = fopen(infile, "r");
     if (inptr == NULL)
     {
@@ -81,10 +78,10 @@ int main(int argc, char *argv[])
     int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 
     // iterate over infile's scanlines
-    ///every row is rotated n times 
+///every row is rotated n times
     for (int i = 0, biHeight = abs(bi.biHeight); i < biHeight; i++)
-    {   
-        /////Every pixel is repeated n times
+    {
+/////Every pixel is repeated n times
 
         // iterate over pixels in scanline
         for (int j = 0; j < bi.biWidth; j++)
@@ -96,18 +93,18 @@ int main(int argc, char *argv[])
 
             ///Resize Horizontally
             ///Remember Padding!!!
-            
+
             ///There are two methods.
             ///rewrite methods
                 ///remeber pixels in an array
-                ///write array as many times as needed 
+                ///write array as many times as needed
             ///Re-copy method
                 ///go back to start of the original scanline
                 ///re-scan scanline
 
             // write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE)*n, 1, outptr);
-            //try to see if you can implement resize by simply stretching n 
+            //try to see if you can implement resize by simply stretching n
             //horizontally first then you can move on to resizing vertically
         }
         // skip over padding, if any
