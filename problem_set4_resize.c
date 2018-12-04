@@ -3,7 +3,6 @@
 #include "bmp.h"
 
 
-
 int main(int argc, char *argv[])
 {
 //Your program should accept exactly 3 command lines!!
