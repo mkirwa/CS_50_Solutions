@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
         fprintf(stderr, "Could not open %s.\n", infile);
         return 2;
     }
-
     // open output file
     FILE *outptr = fopen(outfile, "w");
     if (outptr == NULL)
